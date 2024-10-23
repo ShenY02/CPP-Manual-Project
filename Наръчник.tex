@@ -1,0 +1,511 @@
+\documentclass[oneside]{book}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage[fontsize=12pt]{scrextend}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,bulgarian]{babel}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{array}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\definecolor{codegreen}{rgb}{0,0.85,0}
+\definecolor{codegray}{rgb}{0.65,0.65,0.65}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.2,0.2,0.25}
+
+\lstdefinestyle{mystyle}{
+    language=C++,
+    texcl=true,
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegray},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codegreen},
+    basicstyle=\ttfamily\footnotesize\color{white},
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    extendedchars=\true,
+    inputencoding=utf8x
+}
+
+\lstset{style=mystyle}
+
+\newcommand*{\code}[1]{\texttt{#1}}
+\newcommand*{\cpp}{\texttt{C++}\ }
+\newcommand*{\bs}{\textbackslash}
+
+\title{Наръчник\\Как се научих да програмирам на \cpp
+с помощта на изкуствен интелект}
+\author{Шенер Юмер, 2401321044}
+\date{Използван LLM: Aria}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+\chapter*{Предговор}
+\addcontentsline{toc}{chapter}{Предговор}
+Здравей, скъпи читателю!
+
+Добре дошъл в твоето пътуване през света на програмирането, пътуване,
+което започна с любопитство и ще завърши с осъзнаването, че дори изкуственият
+интелект може да бъде учител.
+
+Тази книга е както проектна работа, така и плод на моя опит в изучаването на \cpp,
+език, който е едновременно мощен и взискателен. С помощта на изкуствения интелект
+Aria от Opera GX, аз се научих да разбирам абстрактни концепции, да решавам сложни
+проблеми и да създавам код, който работи.
+
+На тези страници ще ви покажа уроците, които научих от Aria, и стъпка по стъпка ще ви
+науча как и вие да овладеете тънкостите на езика \cpp. Ще ви докажа, че чрез помощта на 
+изкуственият интелект можете да извлечете изключително много информация за изучаването
+на програмни езици и по този начин да се вдъхновите да се впуснете в света
+на програмирането.
+
+Нека това пътуване ви вдъхнови да преоткриете собствения си потенциал
+и да осъзнаете, че нищо не е невъзможно!
+
+\chapter{Въведение}
+Добре дошли в света на \cpp! Този език за програмиране е истински гигант, който стои в основата на безброй приложения, игри и технологии, които използваме всеки ден. C++ е език, който ви дава мощта да създавате сложни и ефективни програми, да контролирате хардуера на компютъра си и да реализирате най-смелите си идеи. 
+
+Но \cpp не е за начинаещи. Той е мощен и гъвкав, но е и сложен и изисква задълбочено разбиране.  
+
+Какво прави \cpp толкова специален?
+\begin{itemize}
+    \item[--] Обектно-ориентирано програмиране - \cpp е език, който ви позволява да структурирате програмите си около обекти, които съдържат данни и функции. Това е като да създадете симулация на реалния свят в код, където всеки обект е отделен елемент с собствени характеристики и поведение.
+    \item[--] Висока производителност - \cpp е известен с ефективността си. Той ви дава пълен контрол над ресурсите на компютъра и ви позволява да създавате приложения, които работят бързо и ефективно. 
+    \item[--] Гъвкавост - \cpp е гъвкав език, който ви позволява да разработвате разнообразни приложения, от операционни системи и игри до приложения за мобилни устройства. 
+    \item[--] Широко разпространен - \cpp е широко разпространен език, който се използва от милиони програмисти по целия свят. Това означава, че ще имате лесен достъп до ресурси, общности и поддръжка.
+\end{itemize}
+
+Защо да се учите на \cpp?
+\begin{itemize}
+    \item[--] Мощни приложения - \cpp ви дава мощта да създавате комплексни и ефективни приложения, които могат да решават трудни задачи. 
+    \item[--] Дълбоко разбиране - \cpp ви учи да разбирате как работи компютърът и как да управлявате ресурсите му. 
+    \item[--] Отворена врата към нови възможности - \cpp е отворена врата към широк спектър от професионални възможности. 
+\end{itemize}
+
+В тази книга ще ви запознаем с основите на \cpp и ще ви покажем как да създавате свои собствени програми. Пригответе се за вълнуващо пътешествие в света на програмирането! 
+
+\section{Първи стъпки в \cpp}
+В тази глава ще се запознаем с основите на \cpp, като започнем с компилация, компилиране и изпълнение на програми.
+
+\subsection{Компилация и изпълнение}
+\cpp е компилиран език. Това означава, че кодът, който пишете, трябва да бъде преведен на машинно разбираем език, преди да може да се изпълни.
+
+Компилацията е процес, който превръща изходния код (текстовият файл, който вие пишете) в изпълним файл.
+Изпълним файл е файл, който може да се изпълни от компютъра.
+
+За да компилирате и изпълните \cpp програма, ще ви е необходим компилатор.
+Компилатор е програма, която превежда изходния код на \cpp в изпълним файл.
+
+\subsection{Как да компилираме и изпълним програма?}
+Ето стъпките, които трябва да следвате, за да компилирате и изпълните \cpp програма:
+
+\begin{enumerate}
+    \item[--] Създайте нов текстов файл с разширение .cpp.
+    \item[--] Напишете \cpp кода си в този файл.
+    \item[--] Отворете командния ред (или терминал) и отидете до директорията, където е вашият текстов файл.
+    \item[--] Въведете следната команда, за да компилирате програмата:\\
+        \code{g++ име\_на\_файла.cpp -o име\_на\_изпълним\_файл}
+    \item[--] Въведете следната команда, за да изпълните програмата:\\
+        \code{./име\_на\_изпълним\_файл}
+\end{enumerate}
+
+Пример:
+
+Ако вашият файл се казва \code{hello.cpp} и искате да създадете изпълним файл \code{hello}, тогава трябва да въведете следните команди:
+
+\begin{lstlisting}
+g++ hello.cpp -o hello
+./hello
+\end{lstlisting}
+
+\subsection{Имплементиране на български език в \cpp}
+За да използваме български език в кода на \cpp и в конзолата, трябва първо да
+зададем локализацията на проекта:
+\begin{lstlisting}
+#include <locale>
+
+int main() {
+    setlocale(LC_ALL, "Bulgarian");
+        // Локализация на кирилицата в проекта
+
+    return 0;
+}
+\end{lstlisting}
+
+\code{\#include <locale>} - Тази линия включва библиотеката \code{locale}, която ни дава достъп до функции за локализация на езици.
+
+\code{setlocale(LC\_ALL, "Bulgarian");} - Стандартна функция за локализация на български език.
+
+\subsection{Първата ни програма}
+Ето пример за проста \cpp програма, която извежда текст на екрана:
+\begin{lstlisting}
+#include <iostream>
+#include <locale>
+
+int main() {
+    setlocale(LC_ALL, "Bulgarian");
+
+    std::cout << "Hello, world!" << std::endl;
+    return 0;
+}
+\end{lstlisting}
+
+\code{\#include <iostream>} - Тази линия включва библиотеката \code{iostream}, която ни дава достъп до функции за вход и изход.
+
+\code{int main()} - Тази линия дефинира главната функция на програмата. Всички \cpp програми трябва да имат главна функция.
+
+\code{std::cout <}\code{< "Hello, world!"}\code{ <}\code{< std::endl;} - Тази линия извежда текста\\\code{"Hello, world!"} на екрана.
+
+\code{return 0;} - Тази линия завършва изпълнението на програмата.
+
+\section{Ключови елементи на синтаксиса и семантиката на \cpp}
+\subsection{Ключови думи}
+Ключовите думи в \cpp са резервирани думи, които имат специално значение за компилатора. Те не могат да се използват като имена на променливи, функции или други идентификатори.
+
+Ето някои от най-важните ключови думи в \cpp:
+
+\newcolumntype{C}{ >{\centering\arraybackslash} m{6cm} }
+\newcolumntype{D}{ >{\centering\arraybackslash} m{5cm} }
+\begin{center}\begin{tabular}{|C|D|}
+    \hline Ключова дума    &   Описание\\\hline\hline
+    \code{int, float, double, char, bool, void, auto, const, constexpr, decltype} & Типове данни\\\hline
+    \code{if, else, else if, switch, case, default, break, continue, goto} & Условни оператори\\\hline
+    \code{for, while, do while, break, continue} & Цикли\\\hline
+    \code{return, sizeof, new, delete, nullptr, this} & Оператори\\\hline
+    \code{namespace, using, struct, class, enum, union, template, typename, friend, operator} & Организъм на кода\\\hline
+    \code{public, private, protected, static, virtual, override, final, explicit} & Модификатори за достъп\\\hline
+    \code{inline, extern, volatile, mutable, register} & Модификатори за компилация\\\hline
+    \code{try, catch, throw, noexcept} & Обработка на изключения\\\hline
+\end{tabular}\end{center}
+
+Ключовите думи се използват в \cpp код, за да се определят типове данни, структури, класове, функции и други елементи на програмата.
+
+Пример:
+
+\begin{lstlisting}
+int main() {
+    int a = 10; // int е ключова дума за дефиниране на целочислена променлива
+    if (a > 5) { // if е ключова дума за условен оператор
+        std::cout << "a is greater than 5" << std::endl;
+    }
+    return 0; // return е ключова дума за връщане на статус
+}    
+\end{lstlisting}
+
+\subsection{Специални символи}
+В \cpp езикът, освен букви, цифри и ключови думи, има и специални символи, които имат специално значение за компилатора. Тези символи се използват за определяне на оператори, разделителни символи, коментари и други елементи на кода.
+
+\subsubsection{Оператори}
+Операторите са специални символи, които извършват операции върху операнди.
+
+Пример:
+\begin{itemize}
+    \centering
+    \item[] Аритметика
+    \begin{itemize}
+        \item[] \code{+} (събиране): \code{a + b}
+        \item[] \code{-} (изваждане): \code{a - b}
+        \item[] \code{*} (умножение): \code{a * b}
+        \item[] \code{/} (деление): \code{a / b}
+        \item[] \code{\%} (остатък от деление): \code{a \% b}
+        \item[] \code{++} (увеличаване): \code{a++}
+        \item[] \code{-}\code{-} (намаляване): \code{a-}\code{-}
+    \end{itemize}
+    \item[] Условни
+    \begin{itemize}
+        \item[] \code{==} (равенство): \code{a == b}
+        \item[] \code{!=} (неравенство): \code{a != b}
+        \item[] \code{>} (по-голямо): \code{a > b}
+        \item[] \code{<} (по-малко): \code{a < b}
+        \item[] \code{>=} (по-голямо или равно): \code{a >= b}
+        \item[] \code{<=} (по-малко или равно): \code{a <= b}
+        \item[] \code{\&\&} (логическо И): \code{a \&\& b}
+        \item[] \code{||} (логическо ИЛИ): \code{a || b}
+        \item[] \code{!} (логическо НЕ): \code{!a}
+        \item[] \code{?:} (тернарен условен оператор): \code{a ? b : c}
+    \end{itemize}
+    \item[] Битова аритметика
+    \begin{itemize}
+        \item[] \code{\&} (битово И): \code{a \& b}
+        \item[] \code{|} (битово ИЛИ): \code{a | b}
+        \item[] \code{\^{}} (битово ИЗКЛ. ИЛИ): \code{a \^{} b}
+        \item[] \code{\~{}} (битово НЕ): \code{\~{}a}
+        \item[] \code{<}\code{<} (ляво битово изместване): \code{a <}\code{< b}
+        \item[] \code{>}\code{>} (дясно битово изместване): \code{a >}\code{> b}
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Разделителни символи}
+Разделителните символи се използват за разделяне на различни части на \cpp кода.
+
+Пример:
+\begin{itemize}
+    \item[] \code{;} (точка и запетая): \code{int a = 10;}
+    \item[] \code{,} (запетая): \code{int a = 10, b = 20;}
+    \item[] \code{:} (двоеточие): \code{switch (a) \{ case 1: ...; \}}
+    \item[] \code{::} (обхват на име): \code{std::cout}
+    \item[] \code{.} (член на клас): \code{a.b}
+    \item[] \code{->} (член на указател): \code{a->b}
+    \item[] \code{[]} (индексиране): \code{a[b]}
+    \item[] \code{()} (извикване на функция): \code{a()}
+    \item[] \code{\{\}} (блокове код): \code{\{ ... \}}
+\end{itemize}
+
+\subsubsection{Коментари}
+Коментарите са текст, който се игнорира от компилатора. Те се използват за обяснение на кода, добавяне на документация или деактивиране на част от кода.
+
+Пример:
+\begin{itemize}
+    \item \code{//} (едноредов коментар):
+\end{itemize}
+\begin{lstlisting}
+// This is a single line comment.
+\end{lstlisting}
+\begin{itemize}
+    \item \code{/* ... */} (многоредов коментар):
+\end{itemize}
+\begin{lstlisting}
+/*
+ * This is a multiline comment.
+ * It can extend on multiple lines.
+ */
+\end{lstlisting}
+
+\subsection{Идентификатори}
+Идентификаторите в \cpp са имена, които се използват за означаване на променливи, функции, класове, структури, изброявания, области на имена и други елементи на програмата.
+
+\subsubsection{Правила за идентификатори}
+Идентификаторите могат да се състоят от букви, цифри, подчертаване (\code{\_}). Първият символ на идентификатора не може да бъде цифра.
+Ключовите думи не могат да се използват като идентификатори. Чувствителност към регистъра: \code{myVariable} и \code{MyVariable} са различни идентификатори.
+
+\subsubsection{Примери за идентификатори}
+\begin{itemize}
+    \item[--] Променлива: \code{age, firstName, totalScore}
+    \item[--] Функция: \code{calculateArea, printMessage, sortArray}
+    \item[--] Клас: \code{Person, Car, Database}
+    \item[--] Структура: \code{Point, Date, Time}
+    \item[--] Изброяване: \code{Color, Status, Direction}
+    \item[--] Област на имена: \code{std, myNamespace, utils}
+\end{itemize}
+
+\subsubsection{Препоръки за идентификатори}
+Използвайте описателни имена, които отразяват целта на идентификатора. Използвайте \code{camelCase} или \code{snake\_case} за по-добра четимост.
+Избягвайте къси и неясни имена. Не използвайте резервирани думи като идентификатори.
+
+\subsubsection{Пример за код с идентификатори:}
+\begin{lstlisting}
+#include <iostream>
+
+using namespace std; // Дефиниране на областта на имената "std"
+
+int main() {
+    // Дефиниране на променлива с име "age"
+    int age = 25;
+
+    // Дефиниране на функция с име "printMessage"
+    void printMessage(string message) {
+    cout << message << endl;
+    }
+
+    // Извикване на функцията "printMessage"
+    printMessage("Hello, world!");
+
+    return 0;
+}
+\end{lstlisting}
+
+\subsection{Литерали}
+Литералите в \cpp са константни стойности, които се използват за представяне на данни в програмата. Те са директни представяния на данни, които се компилират директно в код.
+
+\subsubsection{Видове литерали}
+\cpp поддържа различни видове литерали, в зависимост от типа на данните:
+
+\begin{itemize}
+    \item Числови литерали:
+    
+    \begin{itemize}
+        \item Цялочислени литерали:
+        \item[] Десетични: \code{10, 25, -15}
+        \item[] Осмоични: \code{012, 037} (започват с \code{0})
+        \item[] Шестнадесетични: \code{0x1A, 0x2F} (започват с \code{0x})
+        \item Дробни литерали: \code{3.14, 1.5e-2} (експоненциална нотация)
+    \end{itemize}
+    
+    \item Символни литерали:
+    
+    \begin{itemize}
+        \item Обикновени: \code{'a', 'B', '\%'}
+        \item Escape последователности: \code{'\bs n', '\bs t', '\bs ''}
+    \end{itemize}
+    \item Текстови литерали:
+    
+    \begin{itemize}
+        \item Обикновени: \code{"Здравей, свят!", "Hello, world!"}
+        \item Raw string литерали: \code{R"(C:\bs Users\bs MyUser\bs Documents)"} (за запазване на escape последователности)
+    \end{itemize}
+    \item Булеви литерали: \code{true, false}
+    \item Указателни литерали: \code{nullptr} (за празен указател)
+\end{itemize}
+
+\subsubsection{Пример за код с литерали}
+\begin{lstlisting}
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    // Цялочислени литерали
+    int age = 25;
+    int octalNumber = 012;
+    int hexNumber = 0x1A;
+
+    // Дробни литерали
+    double pi = 3.14;
+    double smallNumber = 1.5e-2;
+
+    // Символни литерали
+    char character = 'A';
+    char newline = '\n';
+
+    // Текстови литерали
+    string message = "Hello, world!";
+    string path = R"(C:\Users\MyUser\Documents)";
+
+    // Булеви литерали
+    bool isTrue = true;
+    bool isFalse = false;
+
+    // Указателни литерали
+    int* ptr = nullptr;
+
+    return 0;
+}
+\end{lstlisting}
+
+\subsection{Променливи и константи}
+\subsubsection{Променливи}
+Променливите в \cpp са имена, които се използват за съхраняване на данни в паметта. Тези данни могат да бъдат променяни по време на изпълнението на програмата.
+
+\begin{enumerate}
+    \item[1.] Дефиниране на променливи:
+\end{enumerate}
+\begin{lstlisting}
+<datatype> <variable_name>;
+\end{lstlisting}
+\begin{itemize}
+    \item[Пример:] 
+\end{itemize}
+\begin{lstlisting}
+int age; // Дефиниране на променлива от тип "int"\ с име "age"
+double price; // Дефиниране на променлива от тип "double"\ с име "price"
+string name; // Дефиниране на променлива от тип "string"\ с име "name"
+\end{lstlisting}
+\begin{enumerate}
+    \item [2.] Инициализиране на променливи\\Инициализирането на променлива е процесът на присвояване на начална стойност при дефинирането.
+\end{enumerate}
+\begin{itemize}
+    \item[Пример:]
+\end{itemize}
+\begin{lstlisting}
+int age = 25; // Инициализиране на променливата "age"\ със стойност 25
+// Инициализиране на променливата "price"\ със стойност 19.99
+double price = 19.99;
+// Инициализиране на променливата "name"\ със стойност "Ivan"
+string name = "Ivan";
+\end{lstlisting}
+\begin{enumerate}
+    \item[3.] Използване на променливи\\След дефинирането и инициализирането, променливите могат да се използват в програмата.
+\end{enumerate}
+\begin{itemize}
+    \item[Пример:]
+\end{itemize}
+\begin{lstlisting}
+int age = 25;
+// Извеждане на стойността на променливата "age"
+cout << "Your age is: " << age << endl;
+\end{lstlisting}
+\subsubsection{Константи}
+Константите в \cpp са имена, които се използват за съхраняване на данни в паметта, но стойностите им не могат да се променят по време на изпълнението на програмата.
+
+\begin{enumerate}
+    \item[1.] Дефиниране на константи\\За да се дефинира константа, се използва ключовата дума \code{const}:
+\end{enumerate}
+\begin{lstlisting}
+const <datatype> <NAME_OF_CONSTANT> = <value>;
+\end{lstlisting}
+\begin{itemize}
+    \item[Пример:]
+\end{itemize} 
+\begin{lstlisting}
+// Дефиниране на константа от тип "int"\ с име "MAX\_AGE"\ със стойност 120
+const int MAX_AGE = 120;
+// Дефиниране на константа от тип "double"\ с име "PI"\ със стойност 3.14159
+const double PI = 3.14159;
+// Дефиниране на константа от тип "string"\ с име "GREETING"
+// със стойност "Greetings!"
+const string GREETING = "Greetings!";
+\end{lstlisting}
+\begin{enumerate}
+    \item[2.] Използване на константи\\Константите могат да се използват в програмата по същия начин като променливите.
+\end{enumerate}
+\begin{itemize}
+    \item[Пример:]
+\end{itemize}
+\begin{lstlisting}
+const int MAX_AGE = 120;
+int age = 25;
+if (age > MAX_AGE) {
+    cout << "Invalid age!" << endl;
+}
+\end{lstlisting}
+
+\subsection{Подпрограми (Функции)}
+type, void, recursion, lambda
+
+\section{Стандартен конзолен I/O в \cpp}
+\section{Структуриране на \cpp програма}
+\subsection{Директиви към предпроцесора}
+\subsection{Области на имената}
+
+\chapter{Типове данни}
+\section{Типове данни за цели и реални числа}
+\section{Типове данни за символ и низ}
+\section{Логически данни}
+
+\chapter{Конструкции за поточен контрол}
+\section{Конструкции за разклонение}
+!!  Ternary operator
+\section{Конструкции за цикъл}
+\section{Конструкции за прекъсване}
+
+\chapter{Съставни типове данни}
+\section{Масиви}
+\section{Структури}
+\section{Класове}
+\section{Обединения}
+\section{Изброяване}
+\section{Колекции}
+
+\chapter{Манипулиране на паметта}
+\section{Указатели}
+\section{Референции}
+\section{Адресна аритметика}
+\section{Динамично и статично разпределяне на паметта}
+
+\end{document}

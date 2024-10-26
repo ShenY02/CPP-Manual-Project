@@ -24,27 +24,43 @@
 \contentsline {subsubsection}{Променливи}{13}{section*.12}%
 \contentsline {subsubsection}{Константи}{14}{section*.13}%
 \contentsline {subsection}{\numberline {1.2.6}Подпрограми (Функции)}{14}{subsection.1.2.6}%
-\contentsline {section}{\numberline {1.3}Стандартен конзолен I/O в \texttt {C++}\ }{14}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Структуриране на \texttt {C++}\ програма}{14}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Директиви към предпроцесора}{14}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Области на имената}{14}{subsection.1.4.2}%
-\contentsline {chapter}{\numberline {2}Типове данни}{15}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Типове данни за цели и реални числа}{15}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Типове данни за символ и низ}{15}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Логически данни}{15}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Конструкции за поточен контрол}{16}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Конструкции за разклонение}{16}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Конструкции за цикъл}{16}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Конструкции за прекъсване}{16}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Съставни типове данни}{17}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Масиви}{17}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Структури}{17}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Класове}{17}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Обединения}{17}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Изброяване}{17}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Колекции}{17}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Манипулиране на паметта}{18}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Указатели}{18}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Референции}{18}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Адресна аритметика}{18}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Динамично и статично разпределяне на паметта}{18}{section.5.4}%
+\contentsline {subsubsection}{Функции с тип}{15}{section*.14}%
+\contentsline {subsubsection}{Void функции}{15}{section*.15}%
+\contentsline {subsubsection}{Аргументи на функцията}{15}{section*.16}%
+\contentsline {subsubsection}{Предаване по стойност}{16}{section*.17}%
+\contentsline {subsubsection}{Предаване по препратка}{16}{section*.18}%
+\contentsline {subsubsection}{Рекурсия}{17}{section*.19}%
+\contentsline {subsubsection}{Lambda функции}{17}{section*.20}%
+\contentsline {subsection}{\numberline {1.2.7}Атрибути}{17}{subsection.1.2.7}%
+\contentsline {subsubsection}{Const}{17}{section*.21}%
+\contentsline {subsubsection}{Static}{18}{section*.22}%
+\contentsline {subsubsection}{Extern}{18}{section*.23}%
+\contentsline {subsubsection}{Volatile}{18}{section*.24}%
+\contentsline {subsubsection}{Register}{19}{section*.25}%
+\contentsline {subsubsection}{Auto}{19}{section*.26}%
+\contentsline {section}{\numberline {1.3}Стандартен конзолен I/O в \texttt {C++}\ }{19}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Работа с конзолните вход и изход за данни}{19}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Работа със \texttt {string} данни}{19}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Структуриране на \texttt {C++}\ програма}{19}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Директиви към предпроцесора}{19}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Области на имената}{19}{subsection.1.4.2}%
+\contentsline {chapter}{\numberline {2}Типове данни}{20}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Типове данни за цели и реални числа}{20}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Типове данни за символ и низ}{20}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Логически данни}{20}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Конструкции за поточен контрол}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Конструкции за разклонение}{21}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Конструкции за цикъл}{21}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Конструкции за прекъсване}{21}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Съставни типове данни}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Масиви}{22}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Структури}{22}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Класове}{22}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Обединения}{22}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Изброяване}{22}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Колекции}{22}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Манипулиране на паметта}{23}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Указатели}{23}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Референции}{23}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Адресна аритметика}{23}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Динамично и статично разпределяне на паметта}{23}{section.5.4}%

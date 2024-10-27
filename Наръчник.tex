@@ -5,6 +5,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english,bulgarian]{babel}
 \usepackage{amsmath,amsthm,amsfonts}
+\usepackage[framemethod=tikz]{mdframed}
 \usepackage{array}
 \usepackage{indentfirst}
 \usepackage{graphicx}
@@ -17,29 +18,39 @@
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.2,0.2,0.25}
 
+\mdfdefinestyle{bg}{
+    backgroundcolor=backcolour,
+    leftmargin=0pt,
+    hidealllines=true,
+    innerleftmargin=2pt,
+    innerrightmargin=2pt,
+    innertopmargin=-4pt,
+    innerbottommargin=-4pt
+}
+\mdfsetup{style=bg}
+
 \lstdefinestyle{mystyle}{
     language=C++,
     texcl=true,
-    backgroundcolor=\color{backcolour},   
+    backgroundcolor=\color{backcolour},
     commentstyle=\color{codegray},
     keywordstyle=\color{magenta},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codegreen},
     basicstyle=\ttfamily\footnotesize\color{white},
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=6pt,
+    showspaces=false,
     showstringspaces=false,
-    showtabs=false,                  
+    showtabs=false,
     tabsize=2,
     extendedchars=\true,
     inputencoding=utf8x
 }
-
 \lstset{style=mystyle}
 
 \newcommand*{\code}[1]{\texttt{#1}}
@@ -129,15 +140,15 @@ Aria от Opera GX, аз се научих да разбирам абстрак�
 
 Ако вашият файл се казва \code{hello.cpp} и искате да създадете изпълним файл \code{hello}, тогава трябва да въведете следните команди:
 
-\begin{lstlisting}
+\begin{mdframed}\begin{lstlisting}[language=bash]
 g++ hello.cpp -o hello
 ./hello
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 
 \subsection{Имплементиране на български език в \cpp}
 За да използваме български език в кода на \cpp и в конзолата, трябва първо да
 зададем локализацията на проекта:
-\begin{lstlisting}
+\begin{mdframed}\begin{lstlisting}
 #include <locale>
 
 int main() {
@@ -146,7 +157,7 @@ int main() {
 
     return 0;
 }
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 
 \code{\#include <locale>} - Тази линия включва библиотеката \code{locale}, която ни дава достъп до функции за локализация на езици.
 
@@ -154,7 +165,7 @@ int main() {
 
 \subsection{Първата ни програма}
 Ето пример за проста \cpp програма, която извежда текст на екрана:
-\begin{lstlisting}
+\begin{mdframed}\begin{lstlisting}
 #include <iostream>
 #include <locale>
 
@@ -164,7 +175,7 @@ int main() {
     std::cout << "Hello, world!" << std::endl;
     return 0;
 }
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 
 \code{\#include <iostream>} - Тази линия включва библиотеката \code{iostream}, която ни дава достъп до функции за вход и изход.
 
@@ -178,27 +189,24 @@ int main() {
 \subsection{Ключови думи}
 Ключовите думи в \cpp са резервирани думи, които имат специално значение за компилатора. Те не могат да се използват като имена на променливи, функции или други идентификатори.
 
-Ето някои от най-важните ключови думи в \cpp:
-
 \newcolumntype{C}{ >{\centering\arraybackslash} m{6cm} }
 \newcolumntype{D}{ >{\centering\arraybackslash} m{5cm} }
 \begin{center}\begin{tabular}{|C|D|}
     \hline Ключова дума    &   Описание\\\hline\hline
-    \code{int, float, double, char, bool, void, auto, const, constexpr, decltype} & Типове данни\\\hline
-    \code{if, else, else if, switch, case, default, break, continue, goto} & Условни оператори\\\hline
-    \code{for, while, do while, break, continue} & Цикли\\\hline
-    \code{return, sizeof, new, delete, nullptr, this} & Оператори\\\hline
-    \code{namespace, using, struct, class, enum, union, template, typename, friend, operator} & Организъм на кода\\\hline
-    \code{public, private, protected, static, virtual, override, final, explicit} & Модификатори за достъп\\\hline
-    \code{inline, extern, volatile, mutable, register} & Модификатори за компилация\\\hline
-    \code{try, catch, throw, noexcept} & Обработка на изключения\\\hline
+    \vspace{3pt}\code{int, float, double, char, bool, void, auto, const, constexpr, decltype}\vspace{3pt} & Типове данни\\\hline
+    \vspace{3pt}\code{if, else, else if, switch, case, default, break, continue, goto}\vspace{3pt} & Условни оператори\\\hline
+    \vspace{3pt}\code{for, while, do while, break, continue}\vspace{3pt} & Цикли\\\hline
+    \vspace{3pt}\code{return, sizeof, new, delete, nullptr, this}\vspace{3pt} & Оператори\\\hline
+    \vspace{3pt}\code{namespace, using, struct, class, enum, union, template, typename, friend, operator}\vspace{3pt} & Организъм на кода\\\hline
+    \vspace{3pt}\code{public, private, protected, static, virtual, override, final, explicit}\vspace{3pt} & Модификатори за достъп\\\hline
+    \vspace{3pt}\code{inline, extern, volatile, mutable, register}\vspace{3pt} & Модификатори за компилация\\\hline
+    \vspace{3pt}\code{try, catch, throw, noexcept}\vspace{3pt} & Обработка на изключения\\\hline
 \end{tabular}\end{center}
 
 Ключовите думи се използват в \cpp код, за да се определят типове данни, структури, класове, функции и други елементи на програмата.
 
-Пример:
-
-\begin{lstlisting}
+\textbf{Пример:}
+\begin{mdframed}\begin{lstlisting}
 int main() {
     int a = 10; // int е ключова дума за дефиниране на целочислена променлива
     if (a > 5) { // if е ключова дума за условен оператор
@@ -206,7 +214,7 @@ int main() {
     }
     return 0; // return е ключова дума за връщане на статус
 }    
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 
 \subsection{Специални символи}
 В \cpp езикът, освен букви, цифри и ключови думи, има и специални символи, които имат специално значение за компилатора. Тези символи се използват за определяне на оператори, разделителни символи, коментари и други елементи на кода.
@@ -274,18 +282,18 @@ int main() {
 \begin{itemize}
     \item \code{//} (едноредов коментар):
 \end{itemize}
-\begin{lstlisting}
+\begin{mdframed}\begin{lstlisting}
 // This is a single line comment.
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 \begin{itemize}
     \item \code{/* ... */} (многоредов коментар):
 \end{itemize}
-\begin{lstlisting}
+\begin{mdframed}\begin{lstlisting}
 /*
  * This is a multiline comment.
  * It can extend on multiple lines.
  */
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 
 \subsection{Идентификатори}
 Идентификаторите в \cpp са имена, които се използват за означаване на променливи, функции, класове, структури, изброявания, области на имена и други елементи на програмата.
@@ -309,7 +317,7 @@ int main() {
 Избягвайте къси и неясни имена. Не използвайте резервирани думи като идентификатори.
 
 \subsubsection{Пример за код с идентификатори:}
-\begin{lstlisting}
+\begin{mdframed}\begin{lstlisting}
 #include <iostream>
 
 using namespace std; // Дефиниране на областта на имената "std"
@@ -328,7 +336,7 @@ int main() {
 
     return 0;
 }
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 
 \subsection{Литерали}
 Литералите в \cpp са константни стойности, които се използват за представяне на данни в програмата. Те са директни представяния на данни, които се компилират директно в код.
@@ -364,7 +372,7 @@ int main() {
 \end{itemize}
 
 \subsubsection{Пример за код с литерали}
-\begin{lstlisting}
+\begin{mdframed}\begin{lstlisting}
 #include <iostream>
 
 using namespace std;
@@ -390,13 +398,15 @@ int main() {
     // Булеви литерали
     bool isTrue = true;
     bool isFalse = false;
+\end{lstlisting}\end{mdframed}
+\begin{mdframed}\begin{lstlisting}[firstnumber=26]
 
     // Указателни литерали
     int* ptr = nullptr;
 
     return 0;
 }
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 
 \subsection{Променливи и константи}
 \subsubsection{Променливи}
@@ -405,54 +415,54 @@ int main() {
 \begin{enumerate}
     \item[1.] Дефиниране на променливи:
 \end{enumerate}
-\begin{lstlisting}
+\begin{mdframed}\begin{lstlisting}
 <datatype> <variable_name>;
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 \begin{itemize}
     \item[Пример:] 
 \end{itemize}
-\begin{lstlisting}
+\begin{mdframed}\begin{lstlisting}
 int age; // Дефиниране на променлива от тип "int"\ с име "age"
 double price; // Дефиниране на променлива от тип "double"\ с име "price"
 string name; // Дефиниране на променлива от тип "string"\ с име "name"
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 \begin{enumerate}
     \item [2.] Инициализиране на променливи\\Инициализирането на променлива е процесът на присвояване на начална стойност при дефинирането.
 \end{enumerate}
 \begin{itemize}
     \item[Пример:]
 \end{itemize}
-\begin{lstlisting}
+\begin{mdframed}\begin{lstlisting}
 int age = 25; // Инициализиране на променливата "age"\ със стойност 25
 // Инициализиране на променливата "price"\ със стойност 19.99
 double price = 19.99;
 // Инициализиране на променливата "name"\ със стойност "Ivan"
 string name = "Ivan";
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 \begin{enumerate}
     \item[3.] Използване на променливи\\След дефинирането и инициализирането, променливите могат да се използват в програмата.
 \end{enumerate}
 \begin{itemize}
     \item[Пример:]
 \end{itemize}
-\begin{lstlisting}
+\begin{mdframed}\begin{lstlisting}
 int age = 25;
 // Извеждане на стойността на променливата "age"
 cout << "Your age is: " << age << endl;
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 \subsubsection{Константи}
 Константите в \cpp са имена, които се използват за съхраняване на данни в паметта, но стойностите им не могат да се променят по време на изпълнението на програмата.
 
 \begin{enumerate}
     \item[1.] Дефиниране на константи\\За да се дефинира константа, се използва ключовата дума \code{const}:
 \end{enumerate}
-\begin{lstlisting}
+\begin{mdframed}\begin{lstlisting}
 const <datatype> <NAME_OF_CONSTANT> = <value>;
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 \begin{itemize}
     \item[Пример:]
 \end{itemize} 
-\begin{lstlisting}
+\begin{mdframed}\begin{lstlisting}
 // Дефиниране на константа от тип "int"\ с име "MAX\_AGE"\ със стойност 120
 const int MAX_AGE = 120;
 // Дефиниране на константа от тип "double"\ с име "PI"\ със стойност 3.14159
@@ -460,20 +470,20 @@ const double PI = 3.14159;
 // Дефиниране на константа от тип "string"\ с име "GREETING"
 // със стойност "Greetings!"
 const string GREETING = "Greetings!";
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 \begin{enumerate}
     \item[2.] Използване на константи\\Константите могат да се използват в програмата по същия начин като променливите.
 \end{enumerate}
 \begin{itemize}
     \item[Пример:]
 \end{itemize}
-\begin{lstlisting}
+\begin{mdframed}\begin{lstlisting}
 const int MAX_AGE = 120;
 int age = 25;
 if (age > MAX_AGE) {
     cout << "Invalid age!" << endl;
 }
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 
 \subsection{Подпрограми (Функции)}
 Функциите в \cpp са блокове от код, които изпълняват конкретна задача. Те могат да приемат аргументи и връщат резултат.
@@ -481,30 +491,36 @@ if (age > MAX_AGE) {
 \subsubsection{Функции с тип}
 Функциите с тип връщат резултат от конкретен тип.
 
-\textbf{Пример:}
-\begin{lstlisting}
+\begin{itemize}
+    \item[Пример:]
+\end{itemize}
+\begin{mdframed}\begin{lstlisting}
 int sum(int a, int b) {
     return a + b;
 }
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 В този пример функцията \code{sum} приема два целочислени аргумента (\code{a} и \code{b}) и връща цяло число (\code{int}), което е сумата на двата аргумента.
 
 \subsubsection{Void функции}
 \code{Void} функциите не връщат резултат. Те се използват за изпълнение на действия, които не връщат стойност.
 
-\textbf{Пример:}
-\begin{lstlisting}
+\begin{itemize}
+    \item[Пример:]
+\end{itemize}
+\begin{mdframed}\begin{lstlisting}
 void printHello() {
     cout << "Hello, world!" << endl;
 }
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 В този пример функцията \code{printHello} не връща резултат. Тя просто извежда текст на конзолата.
 
 \subsubsection{Аргументи на функцията}
 Аргументите на функцията са стойности, които се предават на функцията при викането й.
-
-\textbf{Пример:}
-\begin{lstlisting}
+\pagebreak
+\begin{itemize}
+    \item[Пример:]
+\end{itemize}
+\begin{mdframed}\begin{lstlisting}
 int sum(int a, int b) {
     return a + b;
 }
@@ -514,14 +530,16 @@ int main() {
     cout << result << endl; // Извеждане на резултата (30)
     return 0;
 }
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 В този пример функцията \code{sum} приема два целочислени аргумента (\code{a} и \code{b}). При викането й в \code{main} функцията, се предават стойностите \code{10} и \code{20} за \code{a} и \code{b} съответно.
-\pagebreak
+
 \subsubsection{Предаване по стойност}
 При предаване по стойност, на функцията се предава копия на аргументите.
 
-\textbf{Пример:}
-\begin{lstlisting}
+\begin{itemize}
+    \item[Пример:]
+\end{itemize}
+\begin{mdframed}\begin{lstlisting}
 void swap(int a, int b) {
     int temp = a;
     a = b;
@@ -535,14 +553,16 @@ int main() {
     cout << x << " " << y << endl; // Извеждане на "10 20"
     return 0;
 }
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 В този пример, функцията \code{swap} не модифицира оригиналните стойности на \code{x} и \code{y}, защото работи с копия.
 
 \subsubsection{Предаване по препратка}
 При предаване по препратка, на функцията се предава адреса на аргументите.
-
-\textbf{Пример:}
-\begin{lstlisting}
+\pagebreak
+\begin{itemize}
+    \item[Пример:]
+\end{itemize}
+\begin{mdframed}\begin{lstlisting}
 void swap(int& a, int& b) {
     int temp = a;
     a = b;
@@ -556,14 +576,15 @@ int main() {
     cout << x << " " << y << endl; // Извеждане на "20 10"
     return 0;
 }
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 В този пример, функцията swap модифицира оригиналните стойности на \code{x} и \code{y}, защото работи с адресите им.
-\pagebreak
 \subsubsection{Рекурсия}
 Рекурсията е техника, при която функция се вика сама себе си.
 
-\textbf{Пример:}
-\begin{lstlisting}
+\begin{itemize}
+    \item[Пример:]
+\end{itemize}
+\begin{mdframed}\begin{lstlisting}
 int factorial(int n) {
     if (n == 0) {
         return 1;
@@ -571,7 +592,7 @@ int factorial(int n) {
         return n * factorial(n - 1);
     }
 }
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 В този пример функцията \code{factorial} изчислява факториела на число чрез рекурсивната формула $n! = n \cdot (n-1)!$.
 
 \textbf{Важно}: Рекурсията трябва да има базов случай, който прекратява рекурсивните викания. В противен случай програмата изпада в безкраен цикъл, докато не се стигне до момента, в който паметта, нужна за запазване на променливите и информацията, надвиши разпределената за процеса памет в стека (Stack overflow).
@@ -579,13 +600,15 @@ int factorial(int n) {
 \subsubsection{Lambda функции}
 Lambda функциите са анонимни функции, които могат да се дефинират и използват в една линия код.
 
-\textbf{Пример:}
-\begin{lstlisting}
+\begin{itemize}
+    \item[Пример:]
+\end{itemize} 
+\begin{mdframed}\begin{lstlisting}
 auto sum = [](int a, int b) {
     return a + b;
 };
 int result = sum(10, 20); // Извикване на lambda функцията
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 В този пример lambda функцията \code{sum} приема два целочислени аргумента (\code{a} и \code{b}) и връща цяло число (\code{int}), което е сумата на двата аргумента.
 
 \subsection{Атрибути}
@@ -594,60 +617,274 @@ int result = sum(10, 20); // Извикване на lambda функцията
 \subsubsection{Const}
 Атрибутът \code{const} определя, че стойността на променливата не може да се променя след инициализирането й. \code{Const} гарантира, че стойността няма да се промени неволно, подобрявайки безопасността на кода.
 
-\textbf{Пример:}
-\begin{lstlisting}
+\begin{itemize}
+    \item[Пример:]
+\end{itemize} 
+\begin{mdframed}\begin{lstlisting}
 const int PI = 3.14159;
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 В този пример \code{PI} е константа с стойност \code{3.14159}.
-
 \subsubsection{Static}
 Атрибутът \code{static} определя, че променливата е статична. Статичните променливи съществуват само в рамките на файла, в който са дефинирани. Инициализират се само веднъж при първото викане на файла и живеят цял живот на програмата. Споделят се между всички функции в файла.
-
-\textbf{Пример:}
-\begin{lstlisting}
+\pagebreak
+\begin{itemize}
+    \item[Пример:]
+\end{itemize}
+\begin{mdframed}\begin{lstlisting}
 static int count = 0;
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 В този пример \code{count} е статична променлива.
 
 \subsubsection{Extern}
 Атрибутът \code{extern} определя, че променливата е дефинирана в друг файл. Атрибутът \code{extern} не инициализира променливата, само указва, че тя съществува някъде друде.
 
-\textbf{Пример:}
-\begin{lstlisting}
+\begin{itemize}
+    \item[Пример:]
+\end{itemize} 
+\begin{mdframed}\begin{lstlisting}
 extern int count;
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 В този пример \code{count} е променлива, която е дефинирана в друг файл.
 
 \subsubsection{Volatile}
 Атрибутът \code{volatile} указва, че стойността на променливата може да се променя външно, без да се вижда от компилатора. Атрибутът \code{volatile} предотвратява компилатора да оптимизира кода, който работи с променливата. Използва се за променливи, чиято стойност може да се промени от външни фактори, като прекъсвания, таймери или други процеси.
 
-\textbf{Пример:}
-\begin{lstlisting}
+\begin{itemize}
+    \item[Пример:]
+\end{itemize} 
+\begin{mdframed}\begin{lstlisting}
 volatile int counter;
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 В този пример \code{counter} е променлива, чиято стойност може да се променя от външен код.
 
 \subsubsection{Register}
 Атрибутът \code{register} препоръчва на компилатора да съхранява променливата в регистър на процесора. Атрибутът \code{register} е само препоръка. Не гарантира, че компилаторът ще съхрани променливата в регистър. Използва се за често използвани променливи, за да се подобри ефективността.
-
-\textbf{Пример:}
-\begin{lstlisting}
+\pagebreak
+\begin{itemize}
+    \item[Пример:]
+\end{itemize} 
+\begin{mdframed}\begin{lstlisting}
 register int i;
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 В този пример \code{i} е променлива, която компилаторът може да съхрани в регистър.
 
 \subsubsection{Auto}
 Атрибутът \code{auto} позволява на компилатора да определи типа на променливата автоматично. \code{Auto} улеснява кода, когато типът на променливата е ясен от инициализацията.
 
-\textbf{Пример:}
-\begin{lstlisting}
+\begin{itemize}
+    \item[Пример:]
+\end{itemize} 
+\begin{mdframed}\begin{lstlisting}
 auto x = 10;
-\end{lstlisting}
+\end{lstlisting}\end{mdframed}
 В този пример \code{x} е променлива с тип \code{int}, определен автоматично от компилатора.
 
 \section{Стандартен конзолен I/O в \cpp}
-\subsection{Работа с конзолните вход и изход за данни}
+В тази част ще разгледаме как се работи със системната конзола за стандартно въвеждане и извеждане на информация в \cpp и как да манипулираме получените данни от конзолата, а именно да обработваме информация от \code{string} данните.
+\subsection{Работа със системната конзола}
+В \cpp за стандартно въвеждане и извеждане на данни се използва пакетът \code{<iostream>}. Той предоставя обекти, които улесняват взаимодействието с потребителя и файловете.
+
+\begin{itemize}
+    \item \code{std::cin} - Стандартен входен поток (конзола).
+    \item \code{std::cout} - Стандартен изходен поток (конзола).
+    \item \code{std::cerr} - Стандартен изходен поток за грешки (конзола).
+    \item \code{std::endl} - \code{'\bs n'} (Нов ред).
+\end{itemize}
+
+Операторите \code{>}\code{>} и \code{<}\code{<} са специални оператори, които улесняват взаимодействието с \code{cin} и \code{cout}.
+
+\begin{itemize}
+    \item \code{>}\code{>} - Операторът за въвеждане.
+    \item \code{<}\code{<} - Операторът за извеждане.
+\end{itemize}
+\pagebreak
+\begin{itemize}
+    \item[Пример:]
+\end{itemize} 
+\begin{mdframed}\begin{lstlisting}{C++}
+#include <iostream>
+
+int main() {
+    int number;
+    std::cout << "Insert a number: "; // Извеждане на текст на конзолата
+    std::cin >> number; // Въвеждане на число от конзолата
+    // Извеждане на числото на конзолата
+    std::cout << "The inserted number is: " << number << std::endl;
+    return 0;
+}
+\end{lstlisting}\end{mdframed}
+
+\subsubsection{Пакет \code{<iomanip>}}
+Пакетът \code{<iomanip>} предоставя методи за манипулиране на входящите и изходящите данни.
+
+\begin{itemize}
+    \item[Пример:]
+\end{itemize} 
+\begin{mdframed}\begin{lstlisting}
+#include <iostream>
+#include <iomanip>
+
+int main() {
+    double number = 123.456789;
+    std::cout << "The number is: " 
+        << std::setprecision(4) << number << std::endl;
+    std::cout << "The number is: " 
+        << std::setw(10) << number << std::endl;
+    return 0;
+}
+\end{lstlisting}\end{mdframed}
+В този пример:
+
+\code{std::setprecision(4)} - ограничава точните цифри на числото до 4.
+
+\code{std::setw(10)} - задава ширина на полето за извеждане на числото на 10 символа.
+
+\begin{itemize}
+    \item[Резултат:]
+\end{itemize} 
+\vspace{-4pt}\begin{mdframed}\begin{lstlisting}[language=bash]
+The number is: 123.5
+The number is:      123.5
+\end{lstlisting}\end{mdframed}
+
+\subsubsection{Допълнителни методи}
+Пакетът \code{<iomanip>} предлага много други методи за форматиране на входящите и изходящите данни.
+
+Някои от тях са:
+\begin{itemize}
+    \item \code{std::fixed} - Извежда числа с фиксирана точка.
+    \item \code{std::scientific} - Извежда числа в научен запис.
+    \item \code{std::left} - Подравнява текста вляво.
+    \item \code{std::right} - Подравнява текста вдясно.
+\end{itemize}
+
 \subsection{Работа със \code{string} данни}
+В \cpp класът \code{std::string} предоставя мощен инструмент за работа с текстови низове. Той осигурява множество функции за манипулиране, сравняване, търсене и модифициране на текстови низове.
+
+\subsubsection{Инициализиране на \code{string}}
+Има няколко начина за инициализиране на string обект:
+
+Празен \code{string}:
+\begin{mdframed}\begin{lstlisting}
+std::string text; // Инициализира празен string
+\end{lstlisting}\end{mdframed}
+
+С текстова константа:
+\vspace{-4pt}\begin{mdframed}\begin{lstlisting}
+// Инициализира string с текстова константа
+std::string text = "Hello, world!";
+\end{lstlisting}\end{mdframed}
+
+С друг \code{string}:
+\vspace{-4pt}\begin{mdframed}\begin{lstlisting}
+std::string text1 = "Hello, ";
+// Инициализира string с конкатенация на други string-ове
+std::string text2 = text1 + "world!";
+\end{lstlisting}\end{mdframed}
+
+С масив от символи:
+\vspace{-4pt}\begin{mdframed}\begin{lstlisting}
+char text[] = "Hello, world!"; // string в стил C
+// Инициализира string в стил C++ с масив от символи
+std::string textString(text);
+\end{lstlisting}\end{mdframed}
+
+\begin{center}\textbf{Основни функции}\end{center}
+
+\newcolumntype{E}{ >{\centering\arraybackslash} m{8cm} }
+\begin{center}\begin{tabular}{|E|C|}
+    \hline
+    \code{getline(istream\& is, string\& str, char delim)} & \vspace{3pt}Въвежда редове от стандартен вход (\code{cin}) в \code{string} обект. \code{delim} определя разделителя на редовете. По подразбиране разделителят е \code{'\bs n'} (нов ред).\vspace{3pt}\\\hline
+    \code{length()} & \vspace{3pt}Връща дължината на текстовия низ.\vspace{3pt}\\\hline
+    \code{at(size\_t pos)} & \vspace{3pt}Връща символа на позиция \code{pos} в текстовия низ.\vspace{3pt}\\\hline
+    \code{append(const string\& str)}\hfil \code{"}\code{+"} & \vspace{3pt}Добавя текстов низ \code{str} към края на текстовия низ.\vspace{3pt}\\\hline
+    \code{compare(const string\& str)}\hfil \code{"}\code{=="} & \vspace{3pt}Сравнява текстовия низ с \code{str}. Връща \code{0}, ако низовете са равни; \code{<0}, ако текстовият низ е по-къс от \code{str}; \code{>0}, ако текстовият низ е по-дълъг от \code{str}.\vspace{3pt}\\\hline
+    \code{substr(size\_t pos, size\_t len)} & \vspace{3pt}Връща подниз от текстовия низ, започвайки от позиция \code{pos} и с дължина \code{len}.\vspace{3pt}\\\hline
+    \code{find(const string\& str, size\_t pos)} & \vspace{3pt}Търси подниз \code{str} в текстовия низ, започвайки от позиция \code{pos}. Връща позицията на първото намиране на \code{str}, ако е намерен, иначе връща \code{string::npos}.\vspace{3pt}\\\hline
+    \code{replace(size\_t pos, size\_t len, const string\& str)} & \vspace{3pt}Заменя подниз от текстовия низ, започвайки от позиция \code{pos} и с дължина \code{len} с \code{str}.\vspace{3pt}\\\hline
+    \code{insert(size\_t pos,\hfil const string\& str)} & \vspace{3pt}Вмъква \code{str} в текстовия низ на позиция \code{pos}.\vspace{3pt}\\\hline
+    \code{erase(size\_t pos, size\_t len)} & \vspace{3pt}Премахва подниз от текстовия низ, започвайки от позиция \code{pos} и с дължина \code{len}.\vspace{3pt}\\\hline
+\end{tabular}\end{center}
+\pagebreak
+
+\textbf{Примери:}
+\begin{mdframed}\begin{lstlisting}
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string text = "Hello, world!";
+
+    // Въвеждане на текст от конзолата
+    cout << "Insert text: ";
+    getline(cin, text);
+
+    // Извеждане на дължината на текста
+    cout << "The length of the text is: " << text.length() << endl;
+
+    // Извеждане на символа на позиция 5
+    cout << "The character at position 5 is: "
+        << text.at(5) << endl;
+
+    // Добавяне на текст към края
+    text.append(" How are you?");
+    cout << "The text is: " << text << endl;
+
+    // Сравняване на два текста
+    string otherText = "Hello, world!";
+    if (text.compare(otherText) == 0) {
+        cout << "The texts are equal." << endl;
+    } else {
+        cout << "The texts are not equal." << endl;
+    }
+
+    // Извеждане на подниз
+    cout << "The substring from position 7 to the end is: "
+        << text.substr(7) << endl;
+
+    // Търсене на подниз
+    size_t pos = text.find("world");
+    if (pos != string::npos) {
+        cout << "The substring \"world\" was found at position: "
+            << pos << endl;
+    } else {
+        cout << "The substring \"world\" wasn't found." << endl;
+    }
+\end{lstlisting}\end{mdframed}
+\begin{mdframed}\begin{lstlisting}[firstnumber=last]
+    
+    // Замяна на подниз
+    text.replace(7, 5, "universe");
+    cout << "The text is: " << text << endl;
+
+    // Вмъкване на текст
+    text.insert(7, "beautiful ");
+    cout << "The text is: " << text << endl;
+
+    // Премахване на текст
+    text.erase(7, 10);
+    cout << "The text is: " << text << endl;
+
+    return 0;
+}
+\end{lstlisting}\end{mdframed}
+
+\textbf{Резултат:} (Примерен входен текст: Hello, world!)
+\begin{mdframed}\begin{lstlisting}[language=bash]
+Insert text: >>Hello, world!
+The length of the text is: 13
+The character at position 5 is: ,
+The text is: Hello, world! How are you?
+The texts are not equal.
+The substring from position 7 to the end is: world! How are you?
+The substring "world" was found at position: 7
+The text is: Hello, universe! How are you?
+The text is: Hello, beautiful universe! How are you?
+The text is: Hello, universe! How are you?
+\end{lstlisting}\end{mdframed}
+
 
 \section{Структуриране на \cpp програма}
 \subsection{Директиви към предпроцесора}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.3)  27 OCT 2024 03:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.3)  27 OCT 2024 03:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1586,27 +1586,41 @@ File: utf8.def 2022/06/07 v1.3c UTF-8 support
 [29
 
 
+]
+{\Bulgarian \CYRG \cyrl \cyra \cyrv \cyra } 6.
+
+
+[30
+
+
+]
+{\Bulgarian \CYRG \cyrl \cyra \cyrv \cyra } 7.
+
+
+[31
+
+
 ] (./Наръчник.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-09-10>
  ***********
 Package rerunfilecheck Info: File `Наръчник.out' has not changed.
-(rerunfilecheck)             Checksum: F487C3350A1EA53B00252C006EF6014A;8875.
+(rerunfilecheck)             Checksum: 944049922E70B387E1CE04E86785FF16;9195.
  ) 
 Here is how much of TeX's memory you used:
- 27230 strings out of 473579
- 496681 string characters out of 5732263
+ 27237 strings out of 473579
+ 496747 string characters out of 5732263
  1372440 words of memory out of 5000000
- 49092 multiletter control sequences out of 15000+600000
+ 49095 multiletter control sequences out of 15000+600000
  577321 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  130i,10n,129p,714b,1328s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1728.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt2074.pfb>
-Output written on Наръчник.pdf (30 pages, 384089 bytes).
+Output written on Наръчник.pdf (32 pages, 388227 bytes).
 PDF statistics:
- 850 PDF objects out of 1000 (max. 8388607)
- 775 compressed objects within 8 object streams
- 401 named destinations out of 1000 (max. 500000)
- 341 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 871 PDF objects out of 1000 (max. 8388607)
+ 794 compressed objects within 8 object streams
+ 405 named destinations out of 1000 (max. 500000)
+ 357 words of extra memory for PDF output out of 10000 (max. 10000000)
 

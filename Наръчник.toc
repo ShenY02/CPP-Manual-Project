@@ -52,26 +52,43 @@
 \contentsline {subsubsection}{\#ifdef, \#ifndef, \#else, \#endif}{27}{section*.33}%
 \contentsline {subsubsection}{\#pragma}{28}{section*.34}%
 \contentsline {subsubsection}{\#error}{28}{section*.35}%
-\contentsline {subsection}{\numberline {1.4.2}Области на имената}{28}{subsection.1.4.2}%
-\contentsline {chapter}{\numberline {2}Типове данни}{29}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Типове данни за цели и реални числа}{29}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Типове данни за символ и низ}{29}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Логически данни}{29}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Конструкции за поточен контрол}{30}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Конструкции за разклонение}{30}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Конструкции за цикъл}{30}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Конструкции за прекъсване}{30}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Съставни типове данни}{31}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Масиви}{31}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Структури}{31}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Класове}{31}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Обединения}{31}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Изброяване}{31}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Колекции}{31}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Манипулиране на паметта}{32}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Указатели}{32}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Референции}{32}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Адресна аритметика}{32}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Динамично и статично разпределяне на паметта}{32}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Алгоритми}{33}{chapter.6}%
-\contentsline {chapter}{Реализация на софтуерно приложение}{34}{chapter*.36}%
+\contentsline {subsection}{\numberline {1.4.2}Области на имената}{29}{subsection.1.4.2}%
+\contentsline {subsubsection}{Дефиниране на области на имената}{29}{section*.36}%
+\contentsline {subsubsection}{Използване на области на имената}{29}{section*.37}%
+\contentsline {chapter}{\numberline {2}Типове данни}{31}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Типове данни за цели и реални числа}{31}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Типове данни за символ и низ}{32}{section.2.2}%
+\contentsline {subsubsection}{Символ (\texttt {char})}{33}{section*.38}%
+\contentsline {subsubsection}{Низ (като масив от символи)}{33}{section*.39}%
+\contentsline {subsubsection}{Низ (\texttt {string})}{33}{section*.40}%
+\contentsline {subsubsection}{Извличане на числа от \texttt {string} данни}{34}{section*.41}%
+\contentsline {section}{\numberline {2.3}Логически данни}{34}{section.2.3}%
+\contentsline {subsubsection}{Използване на логически данни}{35}{section*.42}%
+\contentsline {chapter}{\numberline {3}Конструкции за поточен контрол}{36}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Конструкции за разклонение}{36}{section.3.1}%
+\contentsline {subsubsection}{I. \texttt {if} оператор}{36}{section*.43}%
+\contentsline {subsubsection}{II. \texttt {if-else} оператор}{37}{section*.44}%
+\contentsline {subsubsection}{Тернарен оператор (\texttt {?:})}{37}{section*.45}%
+\contentsline {subsubsection}{III. \texttt {else-if} оператор}{38}{section*.46}%
+\contentsline {subsubsection}{\texttt {switch} оператор}{39}{section*.47}%
+\contentsline {section}{\numberline {3.2}Конструкции за цикъл}{40}{section.3.2}%
+\contentsline {subsubsection}{I. \texttt {while} цикъл}{40}{section*.48}%
+\contentsline {subsubsection}{II. \texttt {do-while} цикъл}{41}{section*.49}%
+\contentsline {subsubsection}{III. \texttt {for} цикъл}{41}{section*.50}%
+\contentsline {subsubsection}{\texttt {for-each} цикъл}{42}{section*.51}%
+\contentsline {section}{\numberline {3.3}Конструкции за прекъсване}{42}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Изключения (Exceptions) и работа с тях}{42}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Съставни типове данни}{43}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Масиви}{43}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Структури}{43}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Класове}{43}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Обединения}{43}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Изброяване}{43}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Колекции}{43}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Манипулиране на паметта}{44}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Указатели}{44}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Референции}{44}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Адресна аритметика}{44}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Динамично и статично разпределяне на паметта}{44}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Алгоритми}{45}{chapter.6}%
+\contentsline {chapter}{Реализация на софтуерно приложение}{46}{chapter*.52}%

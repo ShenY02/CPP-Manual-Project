@@ -784,7 +784,7 @@ std::string text2 = text1 + "world!";
 С масив от символи:
 \vspace{-4pt}\begin{mdframed}\begin{lstlisting}
 char text[] = "Hello, world!"; // string в стил C
-// Инициализира string в стил C++ с масив от символи
+// Инициализира string в стил \cpp с масив от символи
 std::string textString(text);
 \end{lstlisting}\end{mdframed}
 
@@ -995,21 +995,482 @@ The text is: Hello, universe! How are you?
 В този пример, ако константата \code{MY\_CONSTANT} не е дефинирана, компилаторът ще генерира грешка с текст \code{"The constant MY\_CONSTANT is not defined!"}.
 
 \subsection{Области на имената}
+Областите на имената (namespaces) в \cpp са механизъм за организиране на код в логически групи. Те са особено полезни за:
+
+\begin{itemize}
+    \item[] Избягване на конфликти на имена: В големи проекти, с множество модули и библиотеки, е възможно да се използват едни и същи имена за различни променливи, функции, класове и т.н. Областите на имената позволяват да се групират тези елементи, като им се дава уникално име за всяка група.
+    \item[] Подобрена четливост: Те структурират кода, правейки го по-лесен за четене и разбиране.
+    \item[] По-лесно управление на зависимостта: Могат да се използват за управление на зависимостта между различни части от кода.
+\end{itemize}
+
+\subsubsection{Дефиниране на области на имената}
+В \cpp се дефинират области на имената с ключовата дума \code{namespace}. Синтаксисът е следният:
+
+\begin{mdframed}\begin{lstlisting}
+namespace <name_of_namespace> {
+    // Дефиниции на променливи, функции, класове, т.н.
+}
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+namespace MyNamespace {
+    int x = 10;
+    void printX() {
+        std::cout << "x = " << x << std::endl;
+    }
+}
+\end{lstlisting}\end{mdframed}
+
+\subsubsection{Използване на области на имената}
+За да се достъпи до елемент в област на имената, се използва операторът за обхват (\code{::}).
+\pagebreak
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int main() {
+    MyNamespace::printX(); // Извиква функцията printX() от MyNamespace
+    // Достъп до променливата x от MyNamespace
+    std::cout << MyNamespace::x << std::endl;
+    return 0;
+}
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Резултат:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}[language=bash]
+x = 10
+10
+\end{lstlisting}\end{mdframed}
+
+Могат да се дефинират области на имената, вложени една в друга.
+
+Ключовата дума \code{using} може да се използва за импортиране на всички елементи от дадена област на имената.
+Може да се използва за дефиниране на алиас за елемент от област на имената.
+
+\begin{itemize}\item[Пример] за \code{using}:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+using namespace MyNamespace; // Импортиране на всички елементи от MyNamespace
+
+int main() {
+    printX(); // Извиква функцията printX() от MyNamespace
+    // Достъп до променливата x от MyNamespace
+    std::cout << x << std::endl;
+    return 0;
+}
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Резултат:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}[language=bash]
+x = 10
+10
+\end{lstlisting}\end{mdframed}
 
 \chapter{Типове данни}
+В \cpp типовете данни определят вида на данните, които можем да съхраняваме в променливи. Те ни казват каква информация може да се съхранява, как се интерпретира и какви операции могат да се извършват с нея.
 \section{Типове данни за цели и реални числа}
+В \cpp имаме няколко типа данни, които се използват за представяне на цели и реални числа:
+
+Целочислени типове:
+\begin{itemize}
+    \item[--] \code{int}: Най-често използваният тип за цели числа. Обикновено заема 4 байта в паметта и може да съхранява числа в диапазона от -2,147,483,648 до 2,147,483,647.
+    \item[--] \code{short}: Целочислени числа с по-малка големина, обикновено 2 байта. Диапазонът е от -32,768 до 32,767.
+    \item[--] \code{long}: Целочислени числа с по-голяма големина, обикновено 4 байта. Диапазонът е от -2,147,483,648 до 2,147,483,647.
+    \item[--] \code{long long}: Целочислени числа с още по-голяма големина, обикновено 8 байта. Диапазонът е от -9,223,372,036,854,775,808 до 9,223,372,036,854,775,807.
+    \item[--] \code{unsigned int}: Неотрицателни цели числа. Диапазонът е (обикновено) от 0 до 4,294,967,295.
+    \item[--] \code{unsigned short}: Неотрицателни цели числа с по-малка големина. Диапазонът е от 0 до 65,535.
+    \item[--] \code{unsigned long}: Неотрицателни цели числа с по-голяма големина. Диапазонът е от 0 до 4,294,967,295.
+    \item[--] \code{unsigned long long}: Неотрицателни цели числа с още по-голяма големина. Диапазонът е от 0 до 18,446,744,073,709,551,615.
+\end{itemize}
+
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int age = 25;
+short year = 2023;
+long population = 8000000;
+long long bigNumber = 999999999999999999;
+unsigned int counter = 0;
+unsigned short port = 80;
+unsigned long fileSize = 1024 * 1024 * 1024;
+unsigned long long veryBigNumber = 18446744073709551615;
+\end{lstlisting}\end{mdframed}
+
+Типове с плаваща запетая:
+\begin{itemize}
+    \item[--] \code{float}: Числа с плаваща запетая с по-ниска прецизност, обикновено 4 байта.
+    \item[--] \code{double}: Числа с плаваща запетая с по-висока прецизност, обикновено 8 байта.
+    \item[--] \code{long double}: Числа с плаваща запетая с още по-висока прецизност, обикновено 16 байта.
+\end{itemize}
+
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+float temperature = 25.5;
+double pi = 3.141592653589793;
+long double veryPreciseNumber = 3.1415926535897932384626433832795;
+\end{lstlisting}\end{mdframed}
+
 \section{Типове данни за символ и низ}
-За повече информация за работа със \code{string} обекти, виж (\ref{sec:string})
+В \cpp имаме два основни типа данни, които се използват за представяне на текст:
+
+\subsubsection{Символ (\code{char})}
+Използва се за съхраняване на единичен символ, като буква, цифра или специален знак. Заема 1 байт в паметта.
+
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+char letter = 'A';
+char digit = '7';
+char specialSymbol = '\%';
+\end{lstlisting}\end{mdframed}
+
+\subsubsection{Низ (като масив от символи)}
+В \cpp низовете могат да се представят и като масиви от символи. Това е по-старият начин за работа с текст в \cpp (произлизащ от низовете в \code{C}).
+
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+char greeting[] = "Greetings!";
+\end{lstlisting}\end{mdframed}
+
+Този код дефинира масив от символи \code{greeting}, който съдържа низа \\\code{"Greetings"}. Важно е да се отбележи, че масивът \code{greeting} трябва да е с достатъчно голям размер, за да събере всички символи от низа, плюс един допълнителен символ \code{'\bs{0}'} (null terminator), който маркира края на низа.
+
+За повече информация за масиви, виж (\ref{sec:array}).
+
+\subsubsection{Низ (\code{string})}
+Използва се за съхраняване на поредица от символи, т.е. текст. Представлява обект от класа \code{std::string}, дефиниран в заглавния файл \code{<string>}.
+
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+std::string greeting = "Greetings!";
+\end{lstlisting}\end{mdframed}
+
+За повече информация за работа със \code{string} данни, виж (\ref{sec:string}).
+
+\subsubsection{Извличане на числа от \code{string} данни}
+За да извлечем число от \code{string}, можем да използваме функциите \code{stoi()}, \code{stol()}, \code{stoll()}, \code{stof()}, \code{stod()}, \code{stold()}, които се намират в заглавния файл \code{<string>}.
+
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string numberString = "12345";
+    int numberInt = std::stoi(numberString);
+    std::cout << "The number is: " << numberInt << std::endl;
+
+    std::string realNumberString = "3.14159";
+    double realNumberDouble = std::stod(realNumberString);
+    std::cout << "The real number is: "
+        << realNumberDouble << std::endl;
+
+    return 0;
+}
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Резултат:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}[language=bash]
+The number is: 12345
+The real number is: 3.14159
+\end{lstlisting}\end{mdframed}
+
+\textbf{Важно}: Функциите \code{stoi()}, \code{stol()}, \code{stoll()}, \code{stof()}, \code{stod()}, \code{stold()} хвърлят \code{Exception} (виж \ref{sec:exceptions}) от тип \code{std::invalid\_argument}, ако низът не е валидно число.
+
 \section{Логически данни}
+В \cpp имаме логически тип данни (\code{bool}), който може да приема само две стойности:
+
+\begin{itemize}
+    \item[] \code{true}: Истина
+    \item[] \code{false}: Неистина
+\end{itemize}
+\pagebreak
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+bool isSunny = true;
+bool isRainy = false;
+\end{lstlisting}\end{mdframed}
+
+Логическите данни се използват за представяне на условия, които могат да бъдат истинни или неистинни.
+В \cpp \code{true} се представя като \code{1} (или всичко различно от \code{0}), а \code{false} се представя като \code{0}.
+Логическите операции, като например \code{\&\&} (И), \code{||} (ИЛИ), \code{!} (НЕ), се използват за комбиниране на логически условия.
+
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+bool isSunny = true;
+bool isWarm = true;
+
+bool isPerfectDay = isSunny && isWarm; // true
+
+bool isNotPerfectDay = !isPerfectDay; // false
+\end{lstlisting}\end{mdframed}
+
+\subsubsection{Използване на логически данни}
+Логическите данни се използват широко в \cpp за:
+\begin{itemize}
+    \item Условни оператори (\code{if}, \code{else if}, \code{else}): За да се изпълнява код само ако дадено условие е истинно.
+    \item Цикли (\code{for}, \code{while}, \code{do while}): За да се изпълнява код, докато дадено условие е истинно.
+    \item Функции: За да се връщат логически стойности.
+\end{itemize}
+
+За условните оператори и циклите ще научим в следващата глава.
 
 \chapter{Конструкции за поточен контрол}
+В \cpp протичането на програмата може да се контролира чрез различни конструкции, които определят дали дадени части от кода ще бъдат изпълнени или не.
+Тези конструкции са съответно за разклонение в потока, за цикли, за прекъсване и за управление на изключения.
+
 \section{Конструкции за разклонение}
-!!  Ternary operator
+Конструкциите за разклонение ни позволяват да изпълняваме различни части от код в зависимост от резултата от дадено условие. В \cpp имаме 3 основни конструкции за разклонение и 2 алтернативни варианта (частни случаи):
+\subsubsection{I. \code{if} оператор}
+
+Използва се за изпълнение на код, само ако дадено условие е истинно.
+\begin{itemize}\item[Синтаксис:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+if (condition) {
+    // Код, който се изпълнява, ако условието е истинно
+}
+// или
+if (condition) /* Код за изпълнение */;
+\end{lstlisting}\end{mdframed}
+\pagebreak
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int age = 25;
+
+if (age >= 18) {
+    std::cout << "You're old enough." << std::endl;
+}
+\end{lstlisting}\end{mdframed}
+\subsubsection{II. \code{if-else} оператор}
+Използва се за изпълнение на един от два кода, в зависимост от резултата от дадено условие.
+
+\begin{itemize}\item[Синтаксис:]\end{itemize}\vspace{-6pt}
+\begin{mdframed}\begin{lstlisting}
+if (condition) {
+    // Код, който се изпълнява, ако условието е истинно
+} else {
+    // Код, който се изпълнява, ако условието е неистинно
+}
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Пример:]\end{itemize}\vspace{-6pt}
+\begin{mdframed}\begin{lstlisting}
+int age = 15;
+
+if (age >= 18) {
+    std::cout << "You're old enough." << std::endl;
+} else {
+    std::cout << "You're not old enough." << std::endl;
+}
+\end{lstlisting}\end{mdframed}
+
+\subsubsection{Тернарен оператор (\code{?:})}
+Представлява по-кратка форма за писане на \code{if-else} конструкция, когато трябва да запишем стойност на променлива, в зависимост от някакво условие.
+
+\begin{itemize}\item[Синтаксис:]\end{itemize}\vspace{-6pt}
+\begin{mdframed}\begin{lstlisting}
+<type> <var_name> = <conditon> ? <val_if_true> : <val_if_false>;
+\end{lstlisting}\end{mdframed}
+\pagebreak
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int age = 25;
+
+// `if-else` в случая е по-обемен
+if (age >= 18) {
+    std::cout << "Adult" << std::endl;
+} else {
+    std::cout << "Minor" << std::endl;
+}
+
+// С тернарен оператор кода става сравнително по-компактен
+std::cout << ((age >= 18) ? "Adult" : "Minor") << std::endl;
+\end{lstlisting}\end{mdframed}
+
+\subsubsection{III. \code{else-if} оператор}
+Използва се за изпълнение на един от няколко кода, в зависимост от резултата от няколко условия.
+
+\begin{itemize}\item[Синтаксис:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+if (condition_1) {
+    // Код, който се изпълнява, ако condition\_1 е истинно
+} else if (condition_2) {
+    // Код, който се изпълнява, ако condition\_2 е истинно
+} else {
+    // Код, който се изпълнява, ако никое от условията не е истинно
+}
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Пример:]\end{itemize}\vspace{-6pt}
+\begin{mdframed}\begin{lstlisting}
+int grade = 85;
+
+if (grade >= 90) {
+    std::cout << "A" << std::endl;
+} else if (grade >= 80) {
+    std::cout << "B" << std::endl;
+} else if (grade >= 70) {
+    std::cout << "C" << std::endl;
+} else {
+    std::cout << "F" << std::endl;
+}
+\end{lstlisting}\end{mdframed}
+\pagebreak
+\begin{itemize}\item[Резултат:]\end{itemize}\vspace{-18pt}
+\begin{mdframed}\begin{lstlisting}[language=bash]
+B
+\end{lstlisting}\end{mdframed}
+
+\subsubsection{\code{switch} оператор}
+Използва се за проверка на стойността на дадена променлива и изпълнение на код, съответстващ на тази стойност.
+
+\begin{itemize}\item[Синтаксис:]\end{itemize}\vspace{-12pt}
+\begin{mdframed}\begin{lstlisting}
+switch (variable) {
+    case value_1:
+        // Код, който се изпълнява, ако изразът е равен на value\_1
+        break;
+    case value_2:
+        // Код, който се изпълнява, ако изразът е равен на value\_2
+        break;
+    default:
+        // Код, който се изпълнява, ако изразът
+        // не е равен на никоя от стойностите
+}
+\end{lstlisting}\end{mdframed}\vspace{-16pt}
+
+\begin{itemize}\item[Пример:]\end{itemize}\vspace{-12pt}
+\begin{mdframed}\begin{lstlisting}
+int day = 3;
+
+switch (day) {
+    case 1:
+        std::cout << "Monday" << std::endl;
+        break;
+    case 2:
+        std::cout << "Tuesday" << std::endl;
+        break;
+    case 3:
+        std::cout << "Wednesday" << std::endl;
+        break;
+    default:
+        std::cout << "Invalid day" << std::endl;
+}
+\end{lstlisting}\end{mdframed}\vspace{-16pt}
+
+\begin{itemize}\item[Резултат:]\end{itemize}\vspace{-18pt}
+\begin{mdframed}\begin{lstlisting}[language=bash]
+Wednesday
+\end{lstlisting}\end{mdframed}
+
 \section{Конструкции за цикъл}
+Конструкциите за цикли ни позволяват да изпълняваме даден код многократно, докато дадено условие е истинно. В \cpp имаме 3 основни конструкции за цикли и 1 алтернативен вариант (частен случай):
+
+\subsubsection{I. \code{while} цикъл}
+Използва се за изпълнение на код докато дадено условие е истинно.
+
+\begin{itemize}\item[Синтаксис:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+while (condition) {
+    // Код, който се изпълнява многократно
+}
+\end{lstlisting}\end{mdframed}
+
+\textbf{Условие}: Проверява се преди всяко повторение на цикъла. Ако условието е истинно, цикълът се изпълнява.
+
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int i = 0;
+
+while (i < 5) {
+    std::cout << i << std::endl;
+    i++;
+}
+\end{lstlisting}\end{mdframed}
+
+\code{i++}: Увеличава стойността на \code{i} с \code{1} след всяко повторение на цикъла.
+
+\begin{itemize}\item[Резултат:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}[language=bash]
+0
+1
+2
+3
+4
+\end{lstlisting}\end{mdframed}
+
+\textbf{Важно}: Циклите винаги трябва да имат стъпка, в която да се подновява условието, за да се гарантира, че няма да изпадне в безкраен цикъл или изобщо да не се осъществи.
+
+\subsubsection{II. \code{do-while} цикъл}
+Използва се за изпълнение на код поне веднъж и след това докато дадено условие е истинно.
+
+\begin{itemize}\item[Синтаксис:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+do {
+    // Код, който се изпълнява многократно
+} while (condition);
+\end{lstlisting}\end{mdframed}
+
+\textbf{Условие}: Проверява се след всяко повторение на цикъла. Ако условието е истинно, цикълът се изпълнява отново.
+
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int i = 0;
+
+do {
+    std::cout << i << std::endl;
+    i++;
+} while (i < 5);
+\end{lstlisting}\end{mdframed}
+
+\subsubsection{III. \code{for} цикъл}
+Използва се за изпълнение на код за определен брой пъти.
+
+\begin{itemize}\item[Синтаксис:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+for (initialization; condition; updation) {
+    // Код, който се изпълнява многократно
+}
+\end{lstlisting}\end{mdframed}
+
+\textbf{Инициализация}: Изпълнява се веднъж в началото на цикъла. Обикновено се използва за дефиниране на променлива, която ще се използва за броене на повторенията.
+
+\textbf{Условие}: Проверява се преди всяко повторение на цикъла. Ако условието е истинно, цикълът се изпълнява.
+
+\textbf{Стъпка}: Изпълнява се след всяко повторение на цикъла. Обикновено се използва за промяна на стойността на променливата, използвана за броене.
+\pagebreak
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+for (int i = 0; i < 5; i++) {
+    std::cout << i << std::endl;
+}
+\end{lstlisting}\end{mdframed}
+
+\subsubsection{\code{for-each} цикъл}
+Тази конструкция е частен случай на \code{for} цикъла. Използва се за итериране през елементите на контейнер (например масив, вектор, списък).
+
+\begin{itemize}\item[Синтаксис:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+for (<type> <element> : <container>) {
+    // Код, който се изпълнява за всеки елемент
+}
+\end{lstlisting}\end{mdframed}
+
+\textbf{Тип елемент}: Определя типа на елементите в контейнера.
+
+\textbf{Контейнер}: Определя контейнера от елементи, през който ще се итерира.
+
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int numbers[] = {0, 1, 2, 3, 4}; // Масив от числа
+
+for (int number : numbers) {
+    std::cout << number << std::endl;
+}
+\end{lstlisting}\end{mdframed}
+
+Всяко повторение на цикъла, променливата \code{number} ще приема стойността на следващия елемент в масива \code{numbers}.
+
 \section{Конструкции за прекъсване}
+\section{Изключения (Exceptions) и работа с тях}\label{sec:exceptions}
 
 \chapter{Съставни типове данни}
-\section{Масиви}
+\section{Масиви}\label{sec:array}
 \section{Структури}
 \section{Класове}
 \section{Обединения}

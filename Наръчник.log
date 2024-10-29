@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.3)  27 OCT 2024 14:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.3)  29 OCT 2024 19:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -972,7 +972,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.63 ...�а прекъсване}{30}{section.3.3}
+l.79 ...�а прекъсване}{42}{section.3.3}
                                                   % [1
 
 
@@ -1695,43 +1695,534 @@ File: utf8.def 2022/06/07 v1.3c UTF-8 support
 ))
 
 [28]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1009.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1016.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[29]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1029.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1039.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1050.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1062.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[30]
 {\Bulgarian \CYRG \cyrl \cyra \cyrv \cyra } 2.
-
-
-[29
-
-
-]
-{\Bulgarian \CYRG \cyrl \cyra \cyrv \cyra } 3.
-
-
-[30
-
-
-]
-{\Bulgarian \CYRG \cyrl \cyra \cyrv \cyra } 4.
 
 
 [31
 
 
 ]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1085.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1104.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1117.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[32]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1127.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1139.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1149.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[33]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1168.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[34]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1184.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1194.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[35]
+{\Bulgarian \CYRG \cyrl \cyra \cyrv \cyra } 3.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1223.
+(c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[36
+
+
+]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1232.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1243.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1252.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1266.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[37]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1271.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1289.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1300.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[38]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1315.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1323.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1338.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1357.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[39]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1368.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1377.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1389.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[40]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1403.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1412.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1425.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[41]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1438.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1448.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1459.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[42]
+{\Bulgarian \CYRG \cyrl \cyra \cyrv \cyra } 4.
+
+
+[43
+
+
+]
 {\Bulgarian \CYRG \cyrl \cyra \cyrv \cyra } 5.
 
 
-[32
+[44
 
 
 ]
 {\Bulgarian \CYRG \cyrl \cyra \cyrv \cyra } 6.
 
 
-[33
+[45
 
 
 ]
 
-[34
+[46
 
 
 ] (./Наръчник.aux)
@@ -1739,22 +2230,26 @@ File: utf8.def 2022/06/07 v1.3c UTF-8 support
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-09-10>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `Наръчник.out' has not changed.
-(rerunfilecheck)             Checksum: C44E7F66570CCFA67268B393EF7B257D;9309.
+(rerunfilecheck)             Checksum: 62AB6A0E93890E20A2FD4DC867529E63;9638.
  ) 
 Here is how much of TeX's memory you used:
- 27387 strings out of 473579
- 500397 string characters out of 5732263
+ 27964 strings out of 473579
+ 514286 string characters out of 5732263
  1372441 words of memory out of 5000000
- 49149 multiletter control sequences out of 15000+600000
+ 49332 multiletter control sequences out of 15000+600000
  577321 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  130i,10n,129p,714b,1328s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1728.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt2074.pfb>
-Output written on Наръчник.pdf (35 pages, 400227 bytes).
+Output written on Наръчник.pdf (47 pages, 440070 bytes).
 PDF statistics:
- 948 PDF objects out of 1000 (max. 8388607)
- 867 compressed objects within 9 object streams
- 461 named destinations out of 1000 (max. 500000)
- 357 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1298 PDF objects out of 1440 (max. 8388607)
+ 1201 compressed objects within 13 object streams
+ 711 named destinations out of 1000 (max. 500000)
+ 365 words of extra memory for PDF output out of 10000 (max. 10000000)
 

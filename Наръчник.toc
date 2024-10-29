@@ -77,18 +77,24 @@
 \contentsline {subsubsection}{III. \texttt {for} цикъл}{41}{section*.50}%
 \contentsline {subsubsection}{\texttt {for-each} цикъл}{42}{section*.51}%
 \contentsline {section}{\numberline {3.3}Конструкции за прекъсване}{42}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Изключения (Exceptions) и работа с тях}{42}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Съставни типове данни}{43}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Масиви}{43}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Структури}{43}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Класове}{43}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Обединения}{43}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Изброяване}{43}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Колекции}{43}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Манипулиране на паметта}{44}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Указатели}{44}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Референции}{44}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Адресна аритметика}{44}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Динамично и статично разпределяне на паметта}{44}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Алгоритми}{45}{chapter.6}%
-\contentsline {chapter}{Реализация на софтуерно приложение}{46}{chapter*.52}%
+\contentsline {subsubsection}{break}{43}{section*.52}%
+\contentsline {subsubsection}{continue}{43}{section*.53}%
+\contentsline {subsubsection}{return}{44}{section*.54}%
+\contentsline {subsubsection}{goto}{44}{section*.55}%
+\contentsline {section}{\numberline {3.4}Изключения (Exceptions) и работа с тях}{45}{section.3.4}%
+\contentsline {subsubsection}{Как се хвърлят изключения?}{45}{section*.56}%
+\contentsline {subsubsection}{Как се улавят изключения?}{46}{section*.57}%
+\contentsline {chapter}{\numberline {4}Съставни типове данни}{48}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Масиви}{48}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Структури}{48}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Класове}{48}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Обединения}{48}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Изброяване}{48}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Колекции}{48}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Манипулиране на паметта}{49}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Указатели}{49}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Референции}{49}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Адресна аритметика}{49}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Динамично и статично разпределяне на паметта}{49}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Алгоритми}{50}{chapter.6}%
+\contentsline {chapter}{Реализация на софтуерно приложение}{51}{chapter*.58}%

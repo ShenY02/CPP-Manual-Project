@@ -1316,7 +1316,7 @@ if (grade >= 90) {
 B
 \end{lstlisting}\end{mdframed}
 
-\subsubsection{\code{switch} оператор}
+\subsubsection{\code{switch} оператор}\label{sec:switch}
 Използва се за проверка на стойността на дадена променлива и изпълнение на код, съответстващ на тази стойност.
 
 \begin{itemize}\item[Синтаксис:]\end{itemize}\vspace{-12pt}
@@ -1467,8 +1467,189 @@ for (int number : numbers) {
 Всяко повторение на цикъла, променливата \code{number} ще приема стойността на следващия елемент в масива \code{numbers}.
 
 \section{Конструкции за прекъсване}
-\section{Изключения (Exceptions) и работа с тях}\label{sec:exceptions}
+Конструкциите за прекъсване ни позволяват да прекъснем нормалното изпълнение на цикъл или функция. В \cpp имаме четири основни конструкции за прекъсване:
 
+\subsubsection{break}
+Използва се за прекъсване на цикъл и излизане от него. Също се ползва и при \code{switch-case} конструкцията (Виж (\ref{sec:switch})).
+
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        break; // Прекъсва цикъла, когато i е 5
+    }
+    std::cout << i << std::endl;
+}
+\end{lstlisting}\end{mdframed}
+
+Когато \code{i} е равно на \code{5}, \code{break} прекъсва цикъла и изпълнението продължава от кода след цикъл.
+
+\begin{itemize}\item[Резултат:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}[language=bash]
+0
+1
+2
+3
+4
+\end{lstlisting}\end{mdframed}
+
+\subsubsection{continue}
+Използва се за прескачане на текущото повторение на цикъл и преминаване към следващото.
+
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+for (int i = 0; i < 10; i++) {
+    if (i % 2 == 0) {
+        continue; // Прескача четните числа
+    }
+    std::cout << i << std::endl;
+}
+\end{lstlisting}\end{mdframed}
+
+Когато \code{i} е четно число, \code{continue} прескача останалата част от кода в цикъла и преминава към следващото повторение.
+\pagebreak
+\begin{itemize}\item[Резултат:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}[language=bash]
+1
+3
+5
+7
+9
+\end{lstlisting}\end{mdframed}
+
+\subsubsection{return}
+Използва се за прекъсване на функция и връщане на стойност. Ако функцията е от тип \code{void}, \code{return} просто прекъсва функцията.
+
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int sum(int a, int b) {
+    if (a < 0 || b < 0) {
+        return -1; // Връща -1, ако някое от числата е отрицателно
+    }
+    return a + b;
+}
+\end{lstlisting}\end{mdframed}
+
+Когато \code{a} или \code{b} е отрицателно, \code{return} прекъсва функцията \code{sum} и връща \code{-1}.
+
+\subsubsection{goto}
+Примитивна ключова дума. Използва се за неусловен преход към друга част от кода. Може да доведе до нечетлив код или да пречупи интегритета на кода. Да се използва само при изрична необходимост.
+
+\begin{itemize}\item[Синтаксис:]\end{itemize}\vspace{-4pt}
+\begin{mdframed}\begin{lstlisting}
+<label_a>:
+...
+goto <label_a>;
+
+// или
+
+goto <label_b>;
+...
+<label_b>:
+\end{lstlisting}\end{mdframed}
+\pagebreak
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int main() {
+    for (int i = 0; i < 10; i++) {
+        if (i == 5) {
+            goto end; // Прескача останалата част от цикъла
+        }
+        std::cout << i << std::endl;
+    }
+
+    std::cout << "The code will never go through this message"
+        << std::endl;
+
+end:
+    std::cout << "End of loop" << std::endl;
+    return 0;
+}
+\end{lstlisting}\end{mdframed}
+
+Когато \code{i} е равно на \code{5}, \code{goto} прескача останалата част от кода и преминава към кода след етикета \code{end}.
+
+\section{Изключения (Exceptions) и работа с тях}\label{sec:exceptions}
+Изключенията са непредвидени събития, които възникват по време на изпълнението на програмата и могат да нарушат нормалния й ход. В \cpp можем да улавяме тези изключения и да обработваме грешките, за да предотвратим сривове на програмата.
+
+\subsubsection{Как се хвърлят изключения?}
+Използваме ключовата дума \code{throw} за хвърляне на изключение.
+Изключението може да бъде всякакъв тип данни, но най-често се използват класове, които описват типа на грешката.
+
+\begin{itemize}\item[Синтаксис:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+throw <exception_type>(<exception_message>);
+\end{lstlisting}\end{mdframed}
+\pagebreak
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+#include <iostream>
+#include <stdexcept> // Включва библиотеката за основните изключения
+
+int main() {
+    int a, b;
+    std::cout << "Insert two numbers: ";
+    std::cin >> a >> b;
+
+    if (b == 0) {
+        // Хвърляне на изключение
+        throw std::runtime_error("Division by 0!");
+    }
+
+    int result = a / b;
+    std::cout << "The result is: " << result << std::endl;
+
+    return 0;
+}
+\end{lstlisting}\end{mdframed}
+
+В този пример, ако потребителят въведе \code{0} за \code{b}, се хвърля изключение от тип \code{std::runtime\_error}.
+
+\subsubsection{Как се улавят изключения?}
+Използваме контролната конструкция \code{try-catch}, с основната цел да улавя изключения и да ги обработва без да прекъсва протичането на програмата.
+
+\begin{itemize}\item[Синтаксис:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+try {         
+    // Код, който може да хвърли изключение
+} catch (<exception_type> <exception_name>)  {   
+    // Улавя изключението <exception\_name>\ за обработка
+}
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}
+    \item \code{try} блокът обгръща кода, който може да хвърли изключение.
+    \item \code{catch} блокът улавя изключението, ако се хвърли такова.
+\end{itemize}
+\pagebreak
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string str = "Definitely not a number";
+    int num;
+
+    try {
+        num = stoi(str);
+    } catch (std::invalid_argument e) {
+        std::cerr << "\"" << s << "\" is NaN!" << std::endl;
+    }
+
+    return 0;
+}
+\end{lstlisting}\end{mdframed}
+
+В примера нарочно се подава в параметрите на функцията \code{std::stoi} низ, който не може да се конвертира в цяло число,
+за да се улови изключението за невалиден параметър, да се обработи и изведе формално като грешка, без да се прекъсва протичането на програмата.
+
+\begin{itemize}\item[] \textbf{Best practices}:\end{itemize}
+\begin{itemize}
+    \item Да не се вкарва целият код в \code{try-catch} конструкция, а само частта, в която може да се изхвърли изключение.
+    \item Да не се ползва \code{try-catch} конструкцията като основен начин за обработване на грешки. Конструкцията е предназначена за изключения.
+    \item Да се ползва само при необходимост. 
+\end{itemize}
 \chapter{Съставни типове данни}
 \section{Масиви}\label{sec:array}
 \section{Структури}

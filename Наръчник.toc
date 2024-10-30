@@ -86,15 +86,19 @@
 \contentsline {subsubsection}{Как се улавят изключения?}{46}{section*.57}%
 \contentsline {chapter}{\numberline {4}Съставни типове данни}{48}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Масиви}{48}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Структури}{48}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Класове}{48}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Обединения}{48}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Изброяване}{48}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Колекции}{48}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Манипулиране на паметта}{49}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Указатели}{49}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Референции}{49}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Адресна аритметика}{49}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Динамично и статично разпределяне на паметта}{49}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Алгоритми}{50}{chapter.6}%
-\contentsline {chapter}{Реализация на софтуерно приложение}{51}{chapter*.58}%
+\contentsline {subsection}{\numberline {4.1.1}Статични масиви}{48}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Динамични масиви}{49}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Дължина на масив}{50}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Структури}{51}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Обединения}{54}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Изброяване}{55}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Класове}{57}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Колекции}{59}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Ключовата дума \texttt {typedef}}{59}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Манипулиране на паметта}{60}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Указатели}{60}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Референции}{60}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Адресна аритметика}{60}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Динамично и статично разпределяне на паметта}{60}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Алгоритми}{61}{chapter.6}%
+\contentsline {chapter}{Реализация на софтуерно приложение}{62}{chapter*.58}%

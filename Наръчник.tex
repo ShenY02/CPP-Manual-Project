@@ -1634,39 +1634,482 @@ int main() {
     try {
         num = stoi(str);
     } catch (std::invalid_argument e) {
-        std::cerr << "\"" << s << "\" is NaN!" << std::endl;
+        std::cerr << "\"" << str << "\" is NaN!" << std::endl;
     }
 
     return 0;
 }
 \end{lstlisting}\end{mdframed}
 
-В примера нарочно се подава в параметрите на функцията \code{std::stoi} низ, който не може да се конвертира в цяло число,
-за да се улови изключението за невалиден параметър, да се обработи и изведе формално като грешка, без да се прекъсва протичането на програмата.
+В примера нарочно се подава като аргумент на функцията \code{std::stoi} низ, който не може да се конвертира в цяло число,
+за да се улови изключението за невалиден параметър, да се обработи изключението и да се изведе формално като грешка, без да се прекъсва протичането на програмата.
 
-\begin{itemize}\item[] \textbf{Best practices}:\end{itemize}
+\begin{itemize}\item[Резултат:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+>! "Definitely not a number" is NaN!
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[\textbf{Best}] \textbf{practices}:\end{itemize}
 \begin{itemize}
     \item Да не се вкарва целият код в \code{try-catch} конструкция, а само частта, в която може да се изхвърли изключение.
     \item Да не се ползва \code{try-catch} конструкцията като основен начин за обработване на грешки. Конструкцията е предназначена за изключения.
-    \item Да се ползва само при необходимост. 
+    \item Да се ползва само при необходимост.
 \end{itemize}
+
 \chapter{Съставни типове данни}
+Съставните типове данни са производни от примитивните типове данни или изобщо нови конструкции, които ни позволяват да групираме данни от различни типове под едно име, създавайки структурирани обекти от данни. 
+
 \section{Масиви}\label{sec:array}
+Масивите са структурирани данни, които ни позволяват да съхраняваме множество елементи от един и същ тип под едно име. В \cpp имаме два вида масиви: статични и динамични.
+
+\subsection{Статични масиви}
+Статичните масиви се декларират с фиксиран размер по време на компилация.
+Съществуват през целия живот на програмата и са статично разпределени в стека.
+Те са по-прости за използване, но са ограничени по размер, защото не можем да променяме размера на статичния масив след декларацията му.
+
+\begin{itemize}\item[Дефиниция:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+// Инициализация с основни стойности (обикновено 0-ли за числени данни)
+<type> <name>[<length>];
+<type> <name>[<length>] = {};
+
+// Инициализация чрез масивен литерал
+<type> <name>[<length>] = {<el_1> , ... , <el_n>}; 
+<type> <name>[] = {<el_1> , ... , <el_n>};
+\end{lstlisting}\end{mdframed}
+\pagebreak
+\begin{itemize}\item[Пример:]\end{itemize}\vspace{-12pt}
+\begin{mdframed}\begin{lstlisting}
+int numbers[5]; // Масив от 5 цели числа
+\end{lstlisting}\end{mdframed}
+
+Декларацията \code{int numbers[5]} създава масив \code{numbers}, който може да съхранява 5 цели числа.
+
+\textbf{Важно}: Индексите на елементите започват от \code{0} и стигат до (\code{n - 1})\\(В случая до \code{4}).
+
+\begin{itemize}\item[Пример] за промяна и достъп до елемент:\end{itemize}\vspace{-12pt}
+\begin{mdframed}\begin{lstlisting} 
+numbers[0] = 10; // Присвоява стойност 10 на първия елемент
+// Извежда стойността на първия елемент
+std::cout << numbers[0] << std::endl;
+// Извежда стойността на третия елемент
+std::cout << numbers[2] << std::endl; 
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Резултат:]\end{itemize}\vspace{-12pt}
+\begin{mdframed}\begin{lstlisting}
+10
+0
+\end{lstlisting}\end{mdframed}
+
+\subsection{Динамични масиви}
+Динамичните масиви се декларират с размер, който може да се променя по време на изпълнение.
+Te са по-гъвкави, но изискват по-внимателно управление на паметта, защото са динамично разпределени в хийпа (Виж (\ref{sec:allocation}))
+
+Декларацията на динамичните масиви се осъществява чрез указатели\\(Виж (\ref{sec:pointers})), сочещи към първия елемент от разпределена в хийпа памет, които трябва да се освободят след приключване на работата с масива.
+
+\begin{itemize}\item[Дефиниция:]\end{itemize}\vspace{-12pt}
+\begin{mdframed}\begin{lstlisting}
+// Без инициализация
+<type> *<name>;
+<type> *<name> = nullptr;
+
+// Инициализация
+<type> *<name> = new <type>[<length>];
+...
+delete[] <name>; // Освобождаване на разпределената памет!
+\end{lstlisting}\end{mdframed}
+\pagebreak
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int *numbers = new int[5]; // Динамичен масив от 5 цели числа
+...
+delete[] numbers;
+\end{lstlisting}\end{mdframed}
+
+Декларацията \code{int *numbers = new int[5]} създава динамичен масив\\\code{numbers}, който може да съхранява 5 цели числа.
+
+\code{new int[5]} е оператор, който разпределя памет за 5 цели числа на хийпа.
+
+\code{numbers} е указател към първия елемент на масива.
+
+\code{delete[] numbers} освобождава разпределената за масива памет.
+
+\begin{itemize}\item[Пример] за промяна на и достъп до елемент:\end{itemize}
+\begin{mdframed}\begin{lstlisting} 
+numbers[0] = 10; // Присвоява стойност 10 на първия елемент
+// Извежда стойността на първия елемент
+std::cout << numbers[0] << std::endl;
+// Извежда стойността на третия елемент
+std::cout << numbers[2] << std::endl;
+
+// или
+
+*numbers = 10; // Присвоява стойност 10 на първия елемент
+// Извежда стойността на първия елемент
+std::cout << *numbers << std::endl;
+
+numbers += 2; // Измества адреса на указателя, за да сочи към третия елемент
+// Извежда стойността на третия елемент
+std::cout << *numbers << std::endl;
+
+delete[] numbers;
+\end{lstlisting}\end{mdframed}
+
+\textbf{Важно}: Необходимо е да се освободи паметта, заделена за динамичния масив, след като вече не е необходима, използвайки \code{delete[] numbers}\\(Виж защо в (\ref{sec:allocation})).
+
+\subsection{Дължина на масив}
+Дължината на масив се извежда от следната формула:
+
+\begin{mdframed}\begin{lstlisting}
+<type> array[n];
+\end{lstlisting}\end{mdframed}
+\begin{mdframed}\begin{lstlisting}[firstnumber=2]
+std::size_t length = sizeof(array) / sizeof(array[0]);
+// или
+std::size_t length = sizeof(array) / sizeof(<type>);
+\end{lstlisting}\end{mdframed}
+
+Защо не просто \code{sizeof(array)}? Функцията \code{sizeof(<obj>)} Връща бройката байтове, които \code{<obj>} заема, а не бройката елементи (ако изобщо има такива).
+
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int arr[10];
+
+// 40 байта данни на масив от цели числа
+std::cout << "Array bytes: " << sizeof(arr) << endl;
+
+// 4 байта данни от тип цяло число
+std::cout << "int bytes: " << sizeof(arr[0]) << endl;
+
+// 40 байта / 4 байта = 10 цели числа
+std::size_t length = sizeof(arr) / sizeof(arr[0]);
+std::cout << "Array length: " << length << endl;
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Резултат:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}[language=bash]
+Array bytes: 40
+int bytes: 4
+Array length: 10
+\end{lstlisting}\end{mdframed}
+
 \section{Структури}
-\section{Класове}
+Структурите (\code{struct}) са съставни типове данни, които ни позволяват да групираме данни от различни типове под едно име, създавайки структурирани данни.
+Данните в структурите се наричат членове. Структурите са прости за използване и са подходящи за групиране на данни, които не изискват скриване на данни или контрол на достъпа.
+\pagebreak
+\begin{itemize}\item[Дефиниция:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+// Именувана структура, дефинира се извън функциите
+struct <Struct_Type> {
+    <type_1> <var_1>;
+    <type_2> <var_2> = <default_value>;
+    <type_3> <var_3> , ... , <var_n>; // Няколко еднотипни данни
+    ...
+};
+
+// Инстанциализация
+struct <Struct_Type> <struct_name>;
+
+// Инициализация
+<struct_name>.<var_1> = <value_1>;
+<struct_name>.<var_2> = <value_2>;
+...
+
+// Инстанциализация + Инициализация
+struct <Struct_Type> <struct_name> = { <value_1> , ... , <value_n> };
+
+// struct променлива, дефинира се във функция или клас
+struct {
+    ... // Стандартно дефиниране на данните
+} <struct_name>;
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+struct Person {
+    std::string name; // Име (текст)
+    int age; // Възраст (цяло число)
+    double height; // Ръст (число с плаваща запетая)
+};
+\end{lstlisting}\end{mdframed}
+
+Структурата \code{Person} дефинира нов тип данни, който съдържа три члена: \code{name}, \code{age} и \code{height}.
+
+Членовете на структурата могат да бъдат от различни типове.
+\pagebreak
+\begin{itemize}\item[Пример] за работа с обект от тип \code{Person}:\end{itemize}\vspace{-12pt}
+\begin{mdframed}\begin{lstlisting}
+Person p1; // Създава обект от тип `Person`
+
+p1.name = "Ivan"; // Присвоява името "Ivan" на члена `name`
+p1.age = 25; // Присвоява възрастта 25 на члена `age`
+p1.height = 1.80; // Присвоява ръста 1.80 на члена `height`
+
+// или
+
+Person p1 = {"Ivan", 25, 1.80};
+
+std::cout << "The name is: " << p1.name << std::endl;
+std::cout << "The age is: " << p1.age << std::endl;
+std::cout << "The height is: " << p1.height << std::endl;
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Резултат:]\end{itemize}\vspace{-12pt}
+\begin{mdframed}\begin{lstlisting}[language=bash]
+The name is: Ivan
+The age is: 25
+The height is: 1.8
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Пример] за използване на \code{struct}:\end{itemize}\vspace{-12pt}
+\begin{mdframed}\begin{lstlisting} 
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+struct Student {
+    string name;
+    int age;
+    int grades[5];
+};
+
+int main() {
+    Student s1;
+
+    s1.name = "Maria";
+    s1.age = 18;
+    s1.grades[0] = 5;
+    s1.grades[1] = 6;
+    s1.grades[2] = 4;
+    s1.grades[3] = 5;
+    s1.grades[4] = 6;
+    
+\end{lstlisting}\end{mdframed}
+\begin{mdframed}\begin{lstlisting}[firstnumber=last]
+
+    cout << "Name: " << s1.name << endl;
+    cout << "Age: " << s1.age << endl;
+    cout << "Grades: ";
+    for (int i = 0; i < 5; i++) {
+        cout << s1.grades[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Резултат:]\end{itemize}\vspace{-10pt}
+\begin{mdframed}\begin{lstlisting}[language=bash]
+Name: Maria
+Age: 18
+Grades: 5 6 4 5 6 
+\end{lstlisting}\end{mdframed}
+
 \section{Обединения}
+Обединенията (\code{union}) са съставни типове данни, които ни позволяват да съхраняваме различни типове данни в една и съща памет.
+В даден момент може да се съхранява само една от стойностите на членовете.
+Достъпът до различните членове се осъществява чрез името на обединението, последвано от името на члена.
+
+\begin{itemize}\item[Дефиниция:]\end{itemize}\vspace{-12pt}
+\begin{mdframed}\begin{lstlisting}
+union <Union_Name> {
+    <type_1> <var_1>;
+    <type_2> <var_2>;
+    ...
+};
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Пример:]\end{itemize}\vspace{-12pt}
+\begin{mdframed}\begin{lstlisting}
+union Data {
+    int i;
+    float f;
+    char c;
+};
+\end{lstlisting}\end{mdframed}
+
+\code{union Data} - Дефинира нов тип данни, наречен Data, който е обединение.
+
+\code{int i}, \code{float f}, \code{char c} - Членовете на обединението, които могат да съхраняват цели числа, числа с плаваща запетая и символи.
+
+\begin{itemize}\item[Пример] за използване на \code{union}:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int main() {
+    Data d;
+
+    d.i = 10; // Съхранява цяло число
+    std::cout << "d.i = " << d.i << std::endl;
+
+    d.f = 3.14; // Съхранява число с плаваща запетая
+    std::cout << "d.f = " << d.f << std::endl;
+
+    d.c = 'A'; // Съхранява символ
+    std::cout << "d.c = " << d.c << std::endl;
+
+    return 0;
+}
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Резултат:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}[language=bash]
+d.i = 10
+d.f = 3.14
+d.c = A
+\end{lstlisting}\end{mdframed}
+
+\textbf{Важно}: Обединенията са небезопасни, тъй като не е възможно да се проследи кой член е активен в даден момент.
+Не е препоръчително да се използват обединения, освен ако не е абсолютно необходимо.
+Алтернативи на обединенията са структурите и класовете, които предлагат по-безопасни начини за групиране на данни.
+
 \section{Изброяване}
+Изброяванията (\code{enum}) ни позволяват да дефинираме собствени типове данни, които представляват набор от константи. Тези константи са имена, които представляват числови стойности.
+Изброяванията ни позволяват да ограничим възможните стойности на променливите.
+Те улесняват читаемостта на кода, тъй като имена се използват вместо числа.
+\pagebreak
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+enum Color { RED, GREEN, BLUE };
+\end{lstlisting}\end{mdframed}
+
+\code{enum Color} - Дефинира нов тип данни, наречен Color, който е изброяване.
+
+\code{RED}, \code{GREEN}, \code{BLUE} - Имената на константите, които са част от изброяването.
+
+По подразбиране константите в изброяването получават числови стойности, започвайки от 0.
+
+\begin{itemize}\item[Пример] за използване на \code{enum}:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int main() {
+  Color c = GREEN; // Задава стойността на `c` на `GREEN`
+  std::cout << "c = " << c << std::endl; // Извежда: c = 1
+
+  return 0;
+}
+\end{lstlisting}\end{mdframed}
+
+Изброяванията могат да се инициализират ръчно с числови стойности.
+
+\begin{itemize}\item[Пример] за ръчно инициализиране:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+enum Weekday { MON = 1, TUE, WED, THU, FRI, SAT, SUN };
+\end{lstlisting}\end{mdframed}
+
+\code{MON} е инициализиран с \code{1}.
+
+\code{TUE}, \code{WED}, \code{THU}, \code{FRI}, \code{SAT}, \code{SUN} са инициализирани с \code{2}, \code{3}, \code{4}, \code{5}, \code{6}, \code{7} съответно.
+
+Изброяванията са полезни за:
+\begin{itemize}
+    \item[--] Дефиниране на константи, които са лесни за четене и разбиране.
+    \item[--] Ограничаване на възможните стойности на променливите.
+    \item[--] Управление на типове данни в приложения, където е необходимо да се използват ограничен брой стойности.
+\end{itemize}
+
+\section{Класове}
+Класовете са основен градивен елемент в обектно-ориентираното програмиране (ООП) в \cpp. Те ни позволяват да дефинираме собствени типове данни, които инкапсулират данни и функции, свързани с тях. По този начин може да се описват обекти от истинския свят, редом с техните аспекти и функционалности.
+
+Основни характеристики на класовете:
+\begin{itemize}
+    \item Атрибути: Данните, които се съхраняват в обекти от класа. Те се дефинират като член-данни на класа.
+    \item Методи: Функциите, които оперират с данните на класа, или с други класове и функции. Те се дефинират като член-функции на класа.
+    \item Инкапсулация: Скриване на данните и методите на класа от външния свят.
+    \item Абстракция: Представяне на класа само с неговите публични интерфейси, без да се показват подробности за имплементацията.
+    \item Наследственост: Възможност за създаване на нови подкласове, които наследяват свойствата и методите на съществуващи класове.
+    \item Полиморфизъм: Възможност за различно поведение на методите, в зависимост от типа на обекта, към който се прилагат.
+\end{itemize}
+
+\begin{itemize}\item[Дефиниция:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+class <Class_Name> {
+<access_specifier>: // private, protected или public
+    ... // Променливи
+
+    // Конструктор
+    <Class_Name>(list_of_parameters) {
+        ... // Дефиниция на обекта
+    }
+
+    ... // Функции
+
+    // Деструктор
+    ~<Class_Name>() {
+        ... // Деконструкция на обекта
+    }
+}
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}
+    \item \code{class} - Ключова дума за създаване на клас.
+    \item \code{<access\_specifier>} - Ключови думи, определящи достъпа до конкретни променливи, функции, конструктори или деструктори.\\\code{private:} скрива данните от други класове. \code{protected:} скрива данните от всички класове, които не унаследяват този клас. \code{public:} прави данните видими от всички класове.
+    \item Конструктор - Специален метод, който се извиква при създаването на обект от типа на класа. Ако не е дефиниран от потребителя, компилатора го дефинира автоматично по стандарт.
+    \item Деструктор - Специален метод, който се извиква при унищожаването на дадена инстанция на класа. Ако не е дефиниран от потребителя, компилатора го дефинира автоматично по стандарт.
+\end{itemize}
+
+\begin{itemize}\item[Пример] за дефиниране на клас:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+class Rectangle {
+private:
+    double width;
+    double height;
+\end{lstlisting}\end{mdframed}
+\begin{mdframed}\begin{lstlisting}[firstnumber=last]
+
+public:
+    // Конструктор
+    Rectangle(double w, double h) : width(w), height(h) {}
+
+    // Методи
+    double getArea() const {
+        return width * height;
+    }
+
+    double getPerimeter() const {
+        return 2 * (width + height);
+    }
+};
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}
+    \item[--] \code{class Rectangle} - Дефинира нов тип данни, наречен \code{Rectangle}.
+    \item[--] \code{private:} - Секция, която съдържа частните член-данни на класа. Те са недостъпни отвън.
+    \item[--] \code{width} и \code{height} - Частните член-данни, които съхраняват ширината и височината на правоъгълника.
+    \item[--] \code{public:} - Секция, която съдържа публичните член-функции на класа. Те са достъпни отвън.
+    \item[--] \code{Rectangle(double w, double h)} - Конструктор, който се извиква при създаване на обект от тип \code{Rectangle}.
+    \item[--] \code{getArea()} и \code{getPerimeter()} - Публични член-функции, които връщат\\площта и периметъра на правоъгълника.
+\end{itemize}
+
+\begin{itemize}\item[Пример] за използване на клас:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int main() {
+    Rectangle rect1(5.0, 3.0); // Създава обект от тип `Rectangle`
+
+    std::cout << "The area is: " << rect1.getArea() << std::endl;
+    std::cout << "The perimeter is: " << rect1.getPerimeter() << std::endl;
+    return 0;
+}
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Резултат:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}[language=bash]
+The area is: 15
+The perimeter is: 16
+\end{lstlisting}\end{mdframed}
+
 \section{Колекции}
+\section{Ключовата дума \code{typedef}}
 
 \chapter{Манипулиране на паметта}
-\section{Указатели}
+\section{Указатели}\label{sec:pointers}
 \section{Референции}
 \section{Адресна аритметика}
-\section{Динамично и статично разпределяне на паметта}
+\section{Динамично и статично разпределяне на паметта}\label{sec:allocation}
 
 \chapter{Алгоритми}
 
-\chapter*{Реализация на софтуерно приложение "\dots"}
+\chapter*{Реализация на софтуерно приложение "Калкулатор за матрици"}
 \addcontentsline{toc}{chapter}{Реализация на софтуерно приложение}
 
 \end{document}

@@ -94,11 +94,18 @@
 \contentsline {section}{\numberline {4.4}Изброяване}{55}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Класове}{57}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Колекции}{59}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Ключовата дума \texttt {typedef}}{59}{section.4.7}%
-\contentsline {chapter}{\numberline {5}Манипулиране на паметта}{60}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Указатели}{60}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Референции}{60}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Адресна аритметика}{60}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Динамично и статично разпределяне на паметта}{60}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Алгоритми}{61}{chapter.6}%
-\contentsline {chapter}{Реализация на софтуерно приложение}{62}{chapter*.58}%
+\contentsline {subsection}{\numberline {4.6.1}Вектор}{60}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Списък}{61}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Стек}{63}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Опашка}{64}{subsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6.5}Двойнокрайна опашка}{65}{subsection.4.6.5}%
+\contentsline {subsection}{\numberline {4.6.6}Множество}{67}{subsection.4.6.6}%
+\contentsline {subsection}{\numberline {4.6.7}Карта}{68}{subsection.4.6.7}%
+\contentsline {section}{\numberline {4.7}Ключовата дума \texttt {typedef}}{69}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Манипулиране на паметта}{71}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Указатели}{71}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Референции}{71}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Адресна аритметика}{71}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Динамично и статично разпределяне на паметта}{71}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Алгоритми}{72}{chapter.6}%
+\contentsline {chapter}{Реализация на софтуерно приложение}{73}{chapter*.58}%

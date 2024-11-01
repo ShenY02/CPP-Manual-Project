@@ -2099,7 +2099,379 @@ The perimeter is: 16
 \end{lstlisting}\end{mdframed}
 
 \section{Колекции}
+Колекциите в \cpp са структури от данни, които ни позволяват да съхраняваме множество елементи от един и същ тип. Тези структури ни дават гъвкавост при обработката на данни, като ни позволяват да добавяме, премахваме, сортираме и търсим елементи по ефективен начин.
+
+\subsection{Вектор}
+Векторите в \cpp са динамични масиви, които съхраняват елементи от един и същ тип. За разлика от статичните масиви, векторите могат да разширяват размера си динамично, което ги прави гъвкави за работа с променлив брой елементи.
+
+\begin{itemize}\item[Дефиниция:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+#include <vector>
+
+std::vector<int> numbers; // Дефинира вектор от цели числа
+std::vector<std::string> names; // Дефинира вектор от низове
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Добавяне] на елементи:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+numbers.push_back(10); // Добавя 10 към края на вектора
+numbers.push_back(20); // Добавя 20 към края на вектора
+names.push_back("Ivan"); // Добавя "Ivan"\ към края на вектора
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Достъп] до елементи:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int firstNumber = numbers[0]; // Достъп до първия елемент
+std::string secondName = names[1]; // Достъп до втория елемент
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Размер] на вектора:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int size = numbers.size(); // Връща броя на елементите във вектора
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Итериране] през вектора:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+for (int i = 0; i < numbers.size(); i++) {
+    std::cout << numbers[i] << " ";
+}
+\end{lstlisting}\end{mdframed}
+\pagebreak
+\begin{itemize}\item[Изтриване] на елементи:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+numbers.erase(numbers.begin() + 1); // Изтрива втория елемент
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Други] полезни методи:\end{itemize}
+\begin{itemize}
+    \item \code{clear()}: Изтрива всички елементи от вектора.
+    \item \code{empty()}: Връща \code{true}, ако векторът е празен, и \code{false} в противен случай.
+    \item \code{front()}: Връща референция към първия елемент.
+    \item \code{back()}: Връща референция към последния елемент.
+    \item \code{insert()}: Вмъква елемент на определена позиция.
+\end{itemize}
+
+\begin{itemize}\item[Предимства] на векторите:\end{itemize}
+\begin{itemize}
+    \item[--] Динамично разширяване: Могат да съхраняват променлив брой елементи.
+    \item[--] Лесна работа: Предлагат удобни методи за добавяне, премахване, достъп и итериране.
+    \item[--] Ефективност: Осигуряват бърз достъп до елементите.
+\end{itemize}
+
+\subsection{Списък}
+Списъците в \cpp са динамични структури от данни, които съхраняват елементи в свързана верига. Всеки елемент в списъка съдържа данни и посока към следващия елемент.
+
+\begin{itemize}\item[Дефиниция:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+#include <list>
+
+std::list<int> numbers; // Дефинира списък от цели числа
+std::list<std::string> names; // Дефинира списък от низове
+\end{lstlisting}\end{mdframed}
+\pagebreak
+\begin{itemize}\item[Добавяне] на елементи:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+numbers.push_back(10); // Добавя 10 в края на списъка
+numbers.push_front(5); // Добавя 5 в началото на списъка
+names.push_back("Ivan"); // Добавя "Ivan"\ в края на списъка
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Достъп] до елементи: Списъците не поддържат индексиране. За достъп до елементи се използват итератори.\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+std::list<int>::iterator it = numbers.begin(); // Итератор към началото
+int firstNumber = *it; // Достъп до първия елемент
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Размер] на списъка:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int size = numbers.size(); // Връща броя на елементите в списъка
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Итериране] през списък:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+for (
+    std::list<int>::iterator it = numbers.begin();
+    it != numbers.end();
+    ++it
+) {
+    std::cout << *it << " ";
+}
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Изтриване] на елементи:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+numbers.erase(numbers.begin()); // Изтрива първия елемент
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Други] полезни методи:\end{itemize}
+\begin{itemize}
+    \item \code{clear()}: Изтрива всички елементи от списъка.
+    \item \code{empty()}: Връща \code{true}, ако списъкът е празен, и \code{false} в противен случай.
+    \item \code{front()}: Връща референция към първия елемент.
+    \item \code{back()}: Връща референция към последния елемент.
+    \item \code{insert()}: Вмъква елемент на определена позиция.
+    \item \code{sort()}: Сортира елементите в списъка.
+    \item \code{reverse()}: Обръща реда на елементите в списъка.
+\end{itemize}
+
+\begin{itemize}\item[Предимства] на списъците:\end{itemize}
+\begin{itemize}
+    \item[--] Динамично разширяване: Могат да съхраняват променлив брой елементи.
+    \item[--] Ефективност при вмъкване/изтриване: Позволяват бързо вмъкване и изтриване на елементи на всяка позиция.
+    \item[--] Гъвкавост: Поддържат различни операции, като сортиране, обръщане и т.н.
+\end{itemize}
+
+\subsection{Стек}
+Стекът в \cpp е линейна структура от данни, която съхранява елементи по правилото LIFO (Last In, First Out) - последният добавен елемент е първият, който се извлича. Може да се представи като купчина предмети, където можем да добавяме предмети отгоре и да изваждаме само отгоре.
+
+\begin{itemize}\item[Дефиниция:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+#include <stack>
+
+std::stack<int> numbers; // Дефинира стек от цели числа
+std::stack<std::string> names; // Дефинира стек от низове
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Добавяне] на елементи:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+numbers.push(10); // Добавя 10 в стека
+numbers.push(20); // Добавя 20 в стека
+names.push("Ivan"); // Добавя "Ivan"\ в стека
+\end{lstlisting}\end{mdframed}
+\pagebreak
+\begin{itemize}\item[Извличане] на елементи:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+// Връща последния елемент (без да го изтрива)
+int topNumber = numbers.top();
+numbers.pop(); // Изтрива последния елемент
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Проверка] за празен стек:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+bool isEmpty = numbers.empty(); // Връща true, ако стекът е празен
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Размер] на стека:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int size = numbers.size(); // Връща броя на елементите в стека
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Предимства] на стека:\end{itemize}
+\begin{itemize}
+    \item[--] Ефективност: Операциите за добавяне (\code{push}) и извличане (\code{pop}) са бързи.
+    \item[--] Проста реализация: Лесна за разбиране и имплементиране.
+    \item[--] Широко приложение: Използва се в разнообразни алгоритми и структури от данни, например рекурсия, обработка на изрази, обработка на грешки.
+\end{itemize}
+
+\subsection{Опашка}
+Опашката в \cpp е линейна структура от данни, която съхранява елементи по правилото FIFO (First In, First Out) - първият добавен елемент е първият, който се извлича. Може да се представи като опашка в магазин, където клиентите се обслужват по ред.
+
+\begin{itemize}\item[Дефиниция:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+#include <queue>
+
+std::queue<int> numbers; // Дефинира опашка от цели числа
+std::queue<std::string> names; // Дефинира опашка от низове
+\end{lstlisting}\end{mdframed}
+\pagebreak
+\begin{itemize}\item[Добавяне] на елементи:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+numbers.push(10); // Добавя 10 в опашката
+numbers.push(20); // Добавя 20 в опашката
+names.push("Ivan"); // Добавя "Ivan"\ в опашката
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Извличане] на елементи:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+// Връща първия елемент (без да го изтрива)
+int frontNumber = numbers.front();
+numbers.pop(); // Изтрива първия елемент
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Проверка] за празна опашка:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+bool isEmpty = numbers.empty(); // Връща true, ако опашката е празна
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Размер] на опашката:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int size = numbers.size(); // Връща броя на елементите в опашката
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Предимства] на опашката:\end{itemize}
+\begin{itemize}
+    \item[--] Ефективност: Операциите за добавяне (\code{push}) и извличане (\code{pop}) са бързи.
+    \item[--] Проста реализация: Лесна за разбиране и имплементиране.
+    \item[--] Широко приложение: Използва се в разнообразни алгоритми и структури от данни, например обработка на задачи, симулация на системи, мрежови протоколи.
+\end{itemize}
+
+\subsection{Двойнокрайна опашка}
+Двойнокрайна опашка (Deque, произлиза от "double-ended queue") в \cpp е линейна структура от данни, която позволява добавяне и извличане на елементи както от началото, така и от края. Може да се представи като опашка, която е отворена и от две страни.
+\pagebreak
+\begin{itemize}\item[Дефиниция:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+#include <deque>
+
+std::deque<int> numbers; // Дефинира двойнокрайна опашка от цели числа
+std::deque<std::string> names; // Дефинира двойнокрайна опашка от низове
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Добавяне] на елементи:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+numbers.push_front(10); // Добавя 10 в началото на опашката
+numbers.push_back(20); // Добавя 20 в края на опашката
+names.push_front("Ivan"); // Добавя "Ivan"\ в началото на опашката
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Извличане] на елементи:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+// Връща първия елемент (без да го изтрива)
+int frontNumber = numbers.front();
+numbers.pop_front(); // Изтрива първия елемент
+
+// Връща последния елемент (без да го изтрива)
+int backNumber = numbers.back();
+numbers.pop_back(); // Изтрива последния елемент
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Проверка] за празна двойнокрайна опашка:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+bool isEmpty = numbers.empty(); // Връща true, ако опашката е празна
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Размер] на двойнокрайна опашка:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int size = numbers.size(); // Връща броя на елементите в опашката
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Предимства] на двойнокрайна опашка:\end{itemize}
+\begin{itemize}
+    \item[--] Гъвкавост: Позволява добавяне и извличане от две страни, което я прави по-гъвкава от обикновена опашка.
+    \item[--] Ефективност: Операциите за добавяне и извличане са бързи.
+    \item[--] Широко приложение: Използва се в разнообразни алгоритми и структури от данни, например обработка на буфери, реализация на стекове, реализация на опашки.
+\end{itemize}
+
+\subsection{Множество}
+Множеството (Set) в \cpp е структура от данни, която съхранява елементи в подреден ред, без дубликати. Може да се представи като множество в математиката, където всеки елемент се появява само веднъж.
+
+\begin{itemize}\item[Дефиниция:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+#include <set>
+
+std::set<int> numbers; // Дефинира множество от цели числа
+std::set<std::string> names; // Дефинира множество от низове
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Добавяне] на елементи:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+numbers.insert(10); // Добавя 10 в множеството (ако не е вече там)
+numbers.insert(20); // Добавя 20 в множеството (ако не е вече там)
+names.insert("Ivan"); // Добавя "Ivan"\ в множеството (ако не е вече там)
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Проверка] за наличие на елемент:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+bool contains = numbers.count(10); // Връща true, ако 10 е в множеството
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Изтриване] на елемент:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+numbers.erase(10); // Изтрива 10 от множеството (ако е там)
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Размер] на множеството:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int size = numbers.size(); // Връща броя на елементите в множеството
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Предимства] на множеството:\end{itemize}
+\begin{itemize}
+    \item[--] Подреждане: Елементите са подредени по ключ, което улеснява търсенето.
+    \item[--] Ефективност: Операциите за добавяне, изтриване и търсене са бързи.
+    \item[--] Единственост: Не се допускат дубликати, което гарантира уникалност на елементите.
+    \item[--] Широко приложение: Използва се в разнообразни алгоритми и структури от данни, например проверка за дубликати, търсене на минимален или максимален елемент, реализация на графове.
+\end{itemize}
+
+\subsection{Карта}
+Картата (Map) в \cpp е структура от данни, която съхранява двойки от ключ и стойност, като ключът е уникален. Може да се представи като речник, където всеки ключ е свързан с единствена стойност.
+
+\begin{itemize}\item[Дефиниция:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+#include <map>
+
+// Дефинира карта, където ключовете са цели числа, а стойностите са низове
+std::map<int, std::string> names;
+// Дефинира карта, където ключовете са низове, а стойностите са цели числа
+std::map<std::string, int> ages;
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Добавяне] на елементи:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+names[10] = "Ivan"; // Добавя двойка (10, "Ivan") в картата
+// Добавя двойка (20, "Peter") в картата
+names.insert(std::make_pair(20, "Peter"));
+ages["Ivan"] = 25; // Добавя двойка ("Ivan"\, 25) в картата
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Достъп] до стойност по ключ:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+std::string name = names[10]; // Връща стойността, свързана с ключа 10
+int age = ages["Ivan"]; // Връща стойността, свързана с ключа "Ivan"
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Проверка] за наличие на ключ:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+bool exists = names.count(10); // Връща true, ако ключът 10 е в картата
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Изтриване] на елемент:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+names.erase(10); // Изтрива двойката, свързана с ключа 10
+\end{lstlisting}\end{mdframed}
+\pagebreak
+\begin{itemize}\item[Размер] на картата:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+int size = names.size(); // Връща броя на елементите в картата
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Предимства] на картата:\end{itemize}
+\begin{itemize}
+    \item[--] Ефективност: Операциите за добавяне, изтриване и търсене са бързи.
+    \item[--] Уникалност: Не се допускат дубликати на ключове, което гарантира единственост.
+    \item[--] Асоциация: Свързва ключове с стойности, което улеснява достъпа до данни.
+    \item[--] Широко приложение: Използва се в разнообразни алгоритми и структури от данни, например реализация на речници, търсене на данни по ключ, обработка на конфигурационни файлове.
+\end{itemize}
+
 \section{Ключовата дума \code{typedef}}
+\code{typedef} в \cpp е ключова дума, която ви позволява да дефинирате ново име за съществуващ тип данни. Това може да улесни кода ви, като го направи по-четлив и по-лесен за разбиране. Може да се използва също извън функции и класове, т.е. да се дефинират прякори на типове данни извън протичането на програмата.
+\code{typedef} не създава нов тип данни, а само дефинира ново име за съществуващ.
+Не може да се използва за дефиниране на нови класове или структури.
+
+\begin{itemize}\item[Синтаксис:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+typedef <type_name> <new_type_name>;
+\end{lstlisting}\end{mdframed}
+
+\begin{itemize}\item[Пример:]\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+// Дефинира новото име ULLI за типа unsigned long long int
+typedef (unsigned long long int) ULLI;
+\end{lstlisting}\end{mdframed}
+\pagebreak
+Ползи от \code{typedef}:
+\begin{itemize}
+    \item[--] По-четлив код: Използването на ясни имена за типове може да улесни разбирането на кода.
+    \item[--] По-лесно пренаписване: Ако трябва да промените типа на променлива, можете да промените само \code{typedef} дефиницията.
+    \item[--] По-кратки имена: Можете да създадете кратки имена за дълги типове данни.
+\end{itemize}
+
+\begin{itemize}\item[Пример:] за използване:\end{itemize}
+\begin{mdframed}\begin{lstlisting}
+// Дефинира по-кратко име за типа итератор през списък от цели числа
+typedef (std::list<int>::iterator) IntLstIterator;
+
+IntLstIterator it = nullptr;
+\end{lstlisting}\end{mdframed}
 
 \chapter{Манипулиране на паметта}
 \section{Указатели}\label{sec:pointers}

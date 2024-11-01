@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.3)  1 NOV 2024 16:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.3)  1 NOV 2024 18:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3346,21 +3346,102 @@ File: utf8.def 2022/06/07 v1.3c UTF-8 support
 
 [70]
 {\Bulgarian \CYRG \cyrl \cyra \cyrv \cyra } 5.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2486.
+(c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
 
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
 
 [71
 
 
 ]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2495.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2509.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2519.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[72]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2527.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2534.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[73]
 {\Bulgarian \CYRG \cyrl \cyra \cyrv \cyra } 6.
 
 
-[72
+[74
 
 
 ]
 
-[73
+[75
 
 
 ] (./Наръчник.aux)
@@ -3369,21 +3450,21 @@ LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-09-10>
  ***********
 Package rerunfilecheck Info: File `Наръчник.out' has not changed.
-(rerunfilecheck)             Checksum: 041CD43F5158779A2D1DFE67A95C2382;11284.
+(rerunfilecheck)             Checksum: AB4D8480B3E6B8FC4130FC8D7C82E476;11284.
  ) 
 Here is how much of TeX's memory you used:
- 29240 strings out of 473579
- 545747 string characters out of 5732263
- 1374870 words of memory out of 5000000
- 49735 multiletter control sequences out of 15000+600000
+ 29309 strings out of 473579
+ 547689 string characters out of 5732263
+ 1375152 words of memory out of 5000000
+ 49749 multiletter control sequences out of 15000+600000
  577321 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  130i,10n,129p,714b,1328s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1728.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt2074.pfb>
-Output written on Наръчник.pdf (74 pages, 549945 bytes).
+Output written on Наръчник.pdf (76 pages, 556371 bytes).
 PDF statistics:
- 2088 PDF objects out of 2487 (max. 8388607)
- 1957 compressed objects within 20 object streams
- 1252 named destinations out of 1440 (max. 500000)
+ 2131 PDF objects out of 2487 (max. 8388607)
+ 1998 compressed objects within 20 object streams
+ 1283 named destinations out of 1440 (max. 500000)
  453 words of extra memory for PDF output out of 10000 (max. 10000000)
 

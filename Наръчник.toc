@@ -104,8 +104,14 @@
 \contentsline {section}{\numberline {4.7}Ключовата дума \texttt {typedef}}{69}{section.4.7}%
 \contentsline {chapter}{\numberline {5}Манипулиране на паметта}{71}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Указатели}{71}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Референции}{71}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Адресна аритметика}{71}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Динамично и статично разпределяне на паметта}{71}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Алгоритми}{72}{chapter.6}%
-\contentsline {chapter}{Реализация на софтуерно приложение}{73}{chapter*.58}%
+\contentsline {subsubsection}{Дефиниране на указател}{71}{section*.58}%
+\contentsline {subsubsection}{Задаване на адрес на указател}{72}{section*.59}%
+\contentsline {subsubsection}{Достъп до стойността на променливата}{72}{section*.60}%
+\contentsline {subsubsection}{Модифициране на стойността на променливата}{72}{section*.61}%
+\contentsline {subsubsection}{Нулев указател}{73}{section*.62}%
+\contentsline {subsubsection}{Използване на указатели}{73}{section*.63}%
+\contentsline {section}{\numberline {5.2}Референции}{73}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Адресна аритметика}{73}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Динамично и статично разпределяне на паметта}{73}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Алгоритми}{74}{chapter.6}%
+\contentsline {chapter}{Реализация на софтуерно приложение}{75}{chapter*.64}%

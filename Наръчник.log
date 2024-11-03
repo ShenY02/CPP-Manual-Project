@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.3)  2 NOV 2024 21:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.3)  3 NOV 2024 21:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -3606,13 +3606,167 @@ Package ucs Info: utf8x disabled, assuming standard utf8 processing
 
 (c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2022/06/07 v1.3c UTF-8 support
+)) (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
 ))
 
 [87]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2988.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
 
 [88]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3027.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
 
-[89
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3058.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[89]
+Package mdframed Info: Not enough space on this page on input line 3065.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3077.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[90]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3094.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3104.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[91]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3124.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[92]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3154.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[93]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3183.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[94]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3226.
+ (c:/texlive/2024/texmf-dist/tex/latex/ucs/utf8x.def
+File: utf8x.def 2023/11/09 UCS: Input encoding UTF-8
+
+
+Package ucs Info: utf8x disabled, assuming standard utf8 processing
+(ucs)             load ucs package to force utf8x processing.
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2022/06/07 v1.3c UTF-8 support
+))
+
+[95]
+
+[96
 
 
 ] (./Наръчник.aux)
@@ -3624,18 +3778,18 @@ Package rerunfilecheck Info: File `Наръчник.out' has not changed.
 (rerunfilecheck)             Checksum: 5AE669DEA96848A0A85255DF2FDC8D09;12801.
  ) 
 Here is how much of TeX's memory you used:
- 29603 strings out of 473579
- 553734 string characters out of 5732263
- 1375273 words of memory out of 5000000
- 49834 multiletter control sequences out of 15000+600000
- 577321 words of font info for 84 fonts, out of 8000000 for 9000
+ 29920 strings out of 473579
+ 560158 string characters out of 5732263
+ 1375743 words of memory out of 5000000
+ 49909 multiletter control sequences out of 15000+600000
+ 578123 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  130i,15n,129p,714b,1328s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1440.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1728.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt2074.pfb>
-Output written on Наръчник.pdf (90 pages, 647050 bytes).
+Output written on Наръчник.pdf (97 pages, 674047 bytes).
 PDF statistics:
- 2433 PDF objects out of 2487 (max. 8388607)
- 2273 compressed objects within 23 object streams
- 1448 named destinations out of 1728 (max. 500000)
+ 2695 PDF objects out of 2984 (max. 8388607)
+ 2525 compressed objects within 26 object streams
+ 1645 named destinations out of 1728 (max. 500000)
  509 words of extra memory for PDF output out of 10000 (max. 10000000)
 
